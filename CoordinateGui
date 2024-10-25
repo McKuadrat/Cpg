@@ -818,7 +818,7 @@ local script = G2L["29"];
 	end
 	
 	script.Parent.TextButton.MouseButton1Up:Connect(function()
-		if script.Parent.TextBox.Text == "0932982" then
+		if script.Parent.TextBox.Text == "6227623" then
 			script.Parent.Parent.koordg.Visible = true
 			script.Parent.Parent.bar.Visible = true
 			script.Parent.Parent.Sound.SoundId = "rbxassetid://1584394759"
