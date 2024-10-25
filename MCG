@@ -1,0 +1,640 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local MCT = Instance.new("ScreenGui")
+local Stats = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local nem = Instance.new("TextLabel")
+local id = Instance.new("TextLabel")
+local hmm = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local change = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local ImageButton = Instance.new("ImageButton")
+local give = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local premino = Instance.new("TextLabel")
+local passkey = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_5 = Instance.new("UIStroke")
+local TextBox_2 = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
+local UIStroke_6 = Instance.new("UIStroke")
+local getkeylink = Instance.new("TextLabel")
+local enter = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIStroke_7 = Instance.new("UIStroke")
+local getkey = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIStroke_8 = Instance.new("UIStroke")
+local trial = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local UIStroke_9 = Instance.new("UIStroke")
+
+-- Properties:
+
+MCT.Name = "MCT"
+MCT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MCT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MCT.ResetOnSpawn = false
+
+Stats.Name = "Stats"
+Stats.Parent = MCT
+Stats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stats.BackgroundTransparency = 1.000
+Stats.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stats.BorderSizePixel = 0
+Stats.Size = UDim2.new(0, 100, 0, 100)
+Stats.Visible = false
+
+ImageLabel.Parent = Stats
+ImageLabel.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+ImageLabel.BackgroundTransparency = 0.200
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0700000003, 0, 0.0799999982, 0)
+ImageLabel.Size = UDim2.new(0, 52, 0, 52)
+
+UICorner.Parent = ImageLabel
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Parent = ImageLabel
+
+nem.Name = "nem"
+nem.Parent = Stats
+nem.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nem.BackgroundTransparency = 1.000
+nem.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nem.BorderSizePixel = 0
+nem.Position = UDim2.new(0.680000007, 0, 0.0799999982, 0)
+nem.Size = UDim2.new(0, 191, 0, 19)
+nem.Font = Enum.Font.SourceSans
+nem.Text = "Name :"
+nem.TextColor3 = Color3.fromRGB(0, 0, 0)
+nem.TextScaled = true
+nem.TextSize = 14.000
+nem.TextWrapped = true
+nem.TextXAlignment = Enum.TextXAlignment.Left
+nem.TextYAlignment = Enum.TextYAlignment.Top
+
+id.Name = "id"
+id.Parent = Stats
+id.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+id.BackgroundTransparency = 1.000
+id.BorderColor3 = Color3.fromRGB(0, 0, 0)
+id.BorderSizePixel = 0
+id.Position = UDim2.new(0.680000007, 0, 0.289999992, 0)
+id.Size = UDim2.new(0, 191, 0, 19)
+id.Font = Enum.Font.SourceSans
+id.Text = "Name :"
+id.TextColor3 = Color3.fromRGB(0, 0, 0)
+id.TextScaled = true
+id.TextSize = 14.000
+id.TextWrapped = true
+id.TextXAlignment = Enum.TextXAlignment.Left
+id.TextYAlignment = Enum.TextYAlignment.Top
+
+hmm.Name = "hmm"
+hmm.Parent = Stats
+hmm.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+hmm.BackgroundTransparency = 0.200
+hmm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hmm.BorderSizePixel = 0
+hmm.Position = UDim2.new(0.0700000003, 0, 0.680000007, 0)
+hmm.Size = UDim2.new(0, 33, 0, 33)
+hmm.Image = "rbxassetid://98392185727723"
+
+UICorner_2.Parent = hmm
+
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Parent = hmm
+
+Frame.Parent = hmm
+Frame.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+Frame.BackgroundTransparency = 0.450
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(2.18181825, 0, 1, 0)
+Frame.Size = UDim2.new(0, 248, 0, 56)
+Frame.Visible = false
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0544554181, 0, 0.178571433, 0)
+TextBox.Size = UDim2.new(0, 143, 0, 36)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 157, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.685483873, 0, 0.178571433, 0)
+TextButton.Size = UDim2.new(0, 72, 0, 36)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Set"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+change.Name = "change"
+change.Parent = hmm
+change.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+change.BorderColor3 = Color3.fromRGB(0, 0, 0)
+change.BorderSizePixel = 0
+change.Position = UDim2.new(1.27272725, 0, 0, 0)
+change.Size = UDim2.new(0, 51, 0, 33)
+change.Font = Enum.Font.FredokaOne
+change.Text = "Change"
+change.TextColor3 = Color3.fromRGB(255, 255, 255)
+change.TextSize = 14.000
+
+UICorner_3.Parent = change
+
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Parent = change
+
+ImageButton.Parent = hmm
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Size = UDim2.new(0, 33, 0, 33)
+
+give.Name = "give"
+give.Parent = hmm
+give.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+give.BorderColor3 = Color3.fromRGB(0, 0, 0)
+give.BorderSizePixel = 0
+give.Position = UDim2.new(1.27272725, 0, 0, 0)
+give.Size = UDim2.new(0, 51, 0, 33)
+give.Visible = false
+give.Font = Enum.Font.FredokaOne
+give.Text = "Give"
+give.TextColor3 = Color3.fromRGB(255, 255, 255)
+give.TextSize = 14.000
+
+UICorner_4.Parent = give
+
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Parent = give
+
+premino.Name = "premino"
+premino.Parent = Stats
+premino.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+premino.BorderColor3 = Color3.fromRGB(0, 0, 0)
+premino.BorderSizePixel = 0
+premino.Size = UDim2.new(0, 200, 0, 50)
+premino.Visible = false
+premino.Font = Enum.Font.SourceSans
+premino.Text = "Premi"
+premino.TextColor3 = Color3.fromRGB(0, 0, 0)
+premino.TextSize = 14.000
+
+passkey.Name = "passkey"
+passkey.Parent = MCT
+passkey.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+passkey.BackgroundTransparency = 0.100
+passkey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+passkey.BorderSizePixel = 0
+passkey.Position = UDim2.new(0.0171990171, 0, 0.0146103892, 0)
+passkey.Size = UDim2.new(0, 239, 0, 167)
+
+UICorner_5.Parent = passkey
+
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Parent = passkey
+
+TextBox_2.Parent = passkey
+TextBox_2.BackgroundColor3 = Color3.fromRGB(95, 95, 95)
+TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.079497911, 0, 0.078125, 0)
+TextBox_2.Size = UDim2.new(0, 200, 0, 50)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.TextSize = 14.000
+
+UICorner_6.Parent = TextBox_2
+
+UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_6.Parent = TextBox_2
+
+getkeylink.Name = "getkeylink"
+getkeylink.Parent = passkey
+getkeylink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+getkeylink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+getkeylink.BorderSizePixel = 0
+getkeylink.Size = UDim2.new(0, 200, 0, 50)
+getkeylink.Visible = false
+getkeylink.Font = Enum.Font.SourceSans
+getkeylink.Text = "https://mckuadrat.github.io/GetKey/"
+getkeylink.TextColor3 = Color3.fromRGB(0, 0, 0)
+getkeylink.TextSize = 14.000
+
+enter.Name = "enter"
+enter.Parent = passkey
+enter.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+enter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+enter.BorderSizePixel = 0
+enter.Position = UDim2.new(0.079497911, 0, 0.444563985, 0)
+enter.Size = UDim2.new(0, 85, 0, 42)
+enter.Font = Enum.Font.SourceSans
+enter.Text = "Enter"
+enter.TextColor3 = Color3.fromRGB(255, 255, 255)
+enter.TextSize = 24.000
+enter.TextWrapped = true
+
+UICorner_7.Parent = enter
+
+UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_7.Parent = enter
+
+getkey.Name = "getkey"
+getkey.Parent = passkey
+getkey.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+getkey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+getkey.BorderSizePixel = 0
+getkey.Position = UDim2.new(0.560669482, 0, 0.444563985, 0)
+getkey.Size = UDim2.new(0, 85, 0, 42)
+getkey.Font = Enum.Font.SourceSans
+getkey.Text = "Get Key"
+getkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+getkey.TextSize = 24.000
+getkey.TextWrapped = true
+
+UICorner_8.Parent = getkey
+
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_8.Parent = getkey
+
+trial.Name = "trial"
+trial.Parent = passkey
+trial.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+trial.BorderColor3 = Color3.fromRGB(0, 0, 0)
+trial.BorderSizePixel = 0
+trial.Position = UDim2.new(0.0794978738, 0, 0.743965209, 0)
+trial.Size = UDim2.new(0, 200, 0, 34)
+trial.Font = Enum.Font.SourceSans
+trial.Text = "Free Mode(Without Key)"
+trial.TextColor3 = Color3.fromRGB(255, 255, 255)
+trial.TextScaled = true
+trial.TextSize = 24.000
+trial.TextWrapped = true
+
+UICorner_9.Parent = trial
+
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_9.Parent = trial
+
+-- Scripts:
+
+local function KWXWGBP_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local imagelabel = script.Parent
+	imagelabel.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+end
+coroutine.wrap(KWXWGBP_fake_script)()
+local function SMZEQAQ_fake_script() -- nem.LocalScript 
+	local script = Instance.new('LocalScript', nem)
+
+	script.Parent.Text = "Name : "..game.Players.LocalPlayer.Name
+end
+coroutine.wrap(SMZEQAQ_fake_script)()
+local function UMOE_fake_script() -- id.LocalScript 
+	local script = Instance.new('LocalScript', id)
+
+	script.Parent.Text = "ID : "..game.Players.LocalPlayer.UserId
+end
+coroutine.wrap(UMOE_fake_script)()
+local function YLMXG_fake_script() -- hmm.MainScript 
+	local script = Instance.new('LocalScript', hmm)
+
+	local UserInputService = game:GetService("UserInputService")
+	local pid = 0
+	local rbx = "rbxassetid://"
+	local premium = false
+	
+	script.Parent.Parent.premino:GetPropertyChangedSignal("Text"):Connect(function()
+		if script.Parent.Parent.premino.Text == "Yes" then
+			premium = true
+		else
+			premium = false
+		end
+	end)
+	
+	local function changemode()
+		if pid == 0 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Speed"
+			script.Parent.give.Visible = false
+			script.Parent.change.Visible = true
+		elseif pid == 1 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Jump"
+		elseif pid == 2 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Health"
+		elseif pid == 3 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Gravity"
+		elseif pid == 4 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Time"
+		elseif pid == 5 then
+			script.Parent.Frame.TextBox.PlaceholderText = "Teleport"
+			script.Parent.give.Visible = false
+			script.Parent.change.Visible = true
+		elseif pid == 6 then
+			script.Parent.give.Visible = true
+			script.Parent.change.Visible = false
+			script.Parent.Frame.Visible = false
+		elseif pid == 7 then
+			script.Parent.give.Visible = true
+			script.Parent.change.Visible = false
+			script.Parent.Frame.Visible = false
+		end
+	end
+	
+	local function abilityedit()
+		if pid == 0 then
+			pid = 1
+			script.Parent.Image = rbx..6684647765
+		elseif pid == 1 then
+			pid = 2
+			script.Parent.Image = rbx..119725594058749
+		elseif pid == 2 and premium == true then
+			pid = 3
+			script.Parent.Image = "rbxassetid://11930634139"
+		elseif pid == 3 then
+			pid = 4
+			script.Parent.Image = rbx..12798038904
+		elseif pid == 4 then
+			pid = 5
+			script.Parent.Image = rbx..16773466765
+		elseif pid == 5 then
+			pid = 6
+			script.Parent.Image = rbx..66657338
+		elseif pid == 6 then
+			pid = 7
+			script.Parent.Image = rbx..18600008546
+		elseif pid == 7 then
+			pid = 0
+			script.Parent.Image = "rbxassetid://98392185727723"
+		elseif pid == 2 and premium == false then
+			pid = 0
+			script.Parent.Image = "rbxassetid://98392185727723"
+		end
+	end
+	
+	local function ffor()
+		local ff = Instance.new("ForceField")
+		ff.Parent = game.Players.LocalPlayer.Character
+	end
+	
+	-- Fungsi untuk mendeteksi ketika pemain menekan tombol
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		-- Cek apakah input adalah key press dan bukan event dari game
+		if not gameProcessed then
+			-- Cek apakah tombol yang ditekan adalah ']'
+			if input.KeyCode == Enum.KeyCode.RightBracket and pid == 0 then
+				pid = 1
+				script.Parent.Image = rbx..6684647765
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 1 then
+				pid = 2
+				script.Parent.Image = rbx..119725594058749
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 2 and premium == true then
+				pid = 3
+				script.Parent.Image = "rbxassetid://11930634139"
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 3 and premium == true then
+				pid = 4
+				script.Parent.Image = rbx..12798038904
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 4 and premium == true then
+				pid = 5
+				script.Parent.Image = rbx..16773466765
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 5 and premium == true then
+				pid = 6
+				script.Parent.Image = rbx..66657338
+			elseif input.KeyCode == Enum.KeyCode.RightBracket and pid == 6 and premium == true then
+				pid = 7
+				script.Parent.Image = rbx..18600008546
+			end
+			
+			if input.KeyCode == Enum.KeyCode.LeftBracket and pid == 1 then
+				pid = 0
+				script.Parent.Image = "rbxassetid://98392185727723"
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 2 then
+				pid = 1
+				script.Parent.Image = rbx..6684647765
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 3 and premium == true then
+				pid = 2
+				script.Parent.Image = rbx..119725594058749
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 4 and premium == true then
+				pid = 3
+				script.Parent.Image = "rbxassetid://11930634139"
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 5 and premium == true then
+				pid = 4
+				script.Parent.Image = rbx..12798038904
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 6 and premium == true then
+				pid = 5
+				script.Parent.Image = rbx..16773466765
+			elseif input.KeyCode == Enum.KeyCode.LeftBracket and pid == 7 and premium == true then
+				pid = 6
+				script.Parent.Image = rbx..66657338
+			end
+			
+			-- open
+			if input.KeyCode == Enum.KeyCode.E and script.Parent.change.Visible == true then
+				script.Parent.Frame.Visible = not script.Parent.Frame.Visible
+				changemode()
+			elseif input.KeyCode == Enum.KeyCode.E and script.Parent.give.Visible == true and pid == 6 then
+				ffor()
+			elseif input.KeyCode == Enum.KeyCode.E and script.Parent.give.Visible == true and pid == 7 then
+				loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+			end
+		end
+	end)
+	
+	script.Parent.ImageButton.MouseButton1Up:Connect(abilityedit)
+	
+	script.Parent.change.MouseButton1Up:Connect(function()
+		script.Parent.Frame.Visible = not script.Parent.Frame.Visible
+		changemode()
+	end)
+	
+	script.Parent.give.MouseButton1Up:Connect(ffor)
+	
+	script.Parent:GetPropertyChangedSignal("Image"):Connect(changemode)
+end
+coroutine.wrap(YLMXG_fake_script)()
+local function WUJXOSL_fake_script() -- Frame.DraggableGUI 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(WUJXOSL_fake_script)()
+local function ZWFHMQ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local j = script.Parent
+	
+	script.Parent.TextButton.MouseButton1Up:Connect(function()
+		if j.TextBox.PlaceholderText == "Speed" then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(j.TextBox.Text)
+		elseif j.TextBox.PlaceholderText == "Jump" then
+			game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(j.TextBox.Text)
+		elseif j.TextBox.PlaceholderText == "Health" then
+			game.Players.LocalPlayer.Character.Humanoid.MaxHealth = tonumber(j.TextBox.Text)
+			game.Players.LocalPlayer.Character.Humanoid.Health = tonumber(j.TextBox.Text)
+		elseif j.TextBox.PlaceholderText == "Gravity" then
+			game.Workspace.Gravity = tonumber(j.TextBox.Text)
+		elseif j.TextBox.PlaceholderText == "Time" then
+			game.Lighting.TimeOfDay = tonumber(j.TextBox.Text)
+		elseif j.TextBox.PlaceholderText == "Teleport" then
+			local args = string.split(j.TextBox.Text, " ")
+			
+			if #args == 3 then
+				game.Players.LocalPlayer.Character:MoveTo(Vector3.new(args[1], args[2], args[3]))
+			end
+		end
+	end)
+	
+	
+end
+coroutine.wrap(ZWFHMQ_fake_script)()
+local function WVYTG_fake_script() -- passkey.DraggableGUI 
+	local script = Instance.new('LocalScript', passkey)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(WVYTG_fake_script)()
+local function JEVBSTV_fake_script() -- passkey.LocalScript 
+	local script = Instance.new('LocalScript', passkey)
+
+	if game.Players.LocalPlayer.Name == "Fizss9" or game.Players.LocalPlayer.Name == "gindoaslibeneran" then
+		script.Parent.Parent.Stats.premino.Text = "Yes"
+		script.Parent.Parent.Stats.Visible = true
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "MC Trainer",
+			Text = "Skipping Key",
+			Duration = 5,
+			Button1 = "OK"
+		})
+		script.Parent:Destroy()
+	end
+	
+	script.Parent.getkey.MouseButton1Up:Connect(function()
+		setclipboard(script.Parent.getkeylink.Text)
+	end)
+	
+	script.Parent.enter.MouseButton1Up:Connect(function()
+		if script.Parent.TextBox.Text == "737kd8G02JD87123" then
+			script.Parent.Parent.Stats.premino.Text = "Yes"
+			script.Parent.Parent.Stats.Visible = true
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "MC Trainer",
+				Text = "Key Correct",
+				Duration = 5,
+				Button1 = "OK"
+			})
+			script.Parent:Destroy()
+		end
+	end)
+	
+	script.Parent.trial.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Stats.premino.Text = "No"
+		script.Parent.Parent.Stats.Visible = true
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "MC Trainer",
+			Text = "Trial Mode",
+			Duration = 5,
+			Button1 = "OK"
+		})
+		script.Parent:Destroy()
+	end)
+end
+coroutine.wrap(JEVBSTV_fake_script)()
