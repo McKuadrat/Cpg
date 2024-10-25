@@ -44,7 +44,7 @@ local UIStroke_9 = Instance.new("UIStroke")
 -- Properties:
 
 MCT.Name = "MCT"
-MCT.Parent = game.Workspace
+MCT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MCT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 MCT.ResetOnSpawn = false
 
@@ -309,7 +309,7 @@ UIStroke_9.Parent = trial
 
 -- Scripts:
 
-local function CLWLFI_fake_script() -- ImageLabel.LocalScript 
+local function AKXX_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local Players = game:GetService("Players")
@@ -317,20 +317,20 @@ local function CLWLFI_fake_script() -- ImageLabel.LocalScript
 	local imagelabel = script.Parent
 	imagelabel.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 end
-coroutine.wrap(CLWLFI_fake_script)()
-local function PMLVUG_fake_script() -- nem.LocalScript 
+coroutine.wrap(AKXX_fake_script)()
+local function GTPSUD_fake_script() -- nem.LocalScript 
 	local script = Instance.new('LocalScript', nem)
 
 	script.Parent.Text = "Name : "..game.Players.LocalPlayer.Name
 end
-coroutine.wrap(PMLVUG_fake_script)()
-local function AATIT_fake_script() -- id.LocalScript 
+coroutine.wrap(GTPSUD_fake_script)()
+local function PZXDCT_fake_script() -- id.LocalScript 
 	local script = Instance.new('LocalScript', id)
 
 	script.Parent.Text = "ID : "..game.Players.LocalPlayer.UserId
 end
-coroutine.wrap(AATIT_fake_script)()
-local function MRHTW_fake_script() -- hmm.MainScript 
+coroutine.wrap(PZXDCT_fake_script)()
+local function TZTFJ_fake_script() -- hmm.MainScript 
 	local script = Instance.new('LocalScript', hmm)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -484,8 +484,8 @@ local function MRHTW_fake_script() -- hmm.MainScript
 	
 	script.Parent:GetPropertyChangedSignal("Image"):Connect(changemode)
 end
-coroutine.wrap(MRHTW_fake_script)()
-local function ZQRA_fake_script() -- Frame.DraggableGUI 
+coroutine.wrap(TZTFJ_fake_script)()
+local function RPGTUOZ_fake_script() -- Frame.DraggableGUI 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -523,8 +523,8 @@ local function ZQRA_fake_script() -- Frame.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(ZQRA_fake_script)()
-local function PXZJP_fake_script() -- Frame.LocalScript 
+coroutine.wrap(RPGTUOZ_fake_script)()
+local function XJHAPV_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local j = script.Parent
@@ -552,8 +552,8 @@ local function PXZJP_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(PXZJP_fake_script)()
-local function OUZMGXD_fake_script() -- passkey.DraggableGUI 
+coroutine.wrap(XJHAPV_fake_script)()
+local function COSY_fake_script() -- passkey.DraggableGUI 
 	local script = Instance.new('LocalScript', passkey)
 
 	local UIS = game:GetService('UserInputService')
@@ -591,8 +591,8 @@ local function OUZMGXD_fake_script() -- passkey.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(OUZMGXD_fake_script)()
-local function AVQQA_fake_script() -- passkey.LocalScript 
+coroutine.wrap(COSY_fake_script)()
+local function PBVE_fake_script() -- passkey.LocalScript 
 	local script = Instance.new('LocalScript', passkey)
 
 	if game.Players.LocalPlayer.Name == "Fizss9" or game.Players.LocalPlayer.Name == "gwindoaslibeneran" then
@@ -637,4 +637,4 @@ local function AVQQA_fake_script() -- passkey.LocalScript
 		script.Parent:Destroy()
 	end)
 end
-coroutine.wrap(AVQQA_fake_script)()
+coroutine.wrap(PBVE_fake_script)()
