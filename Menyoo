@@ -1,0 +1,2564 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 148 | Scripts: 16 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Menyoo
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Menyoo]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.Menyoo.ImageLabel
+G2L["2"] = Instance.new("ImageLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["ImageTransparency"] = 1;
+G2L["2"]["Image"] = [[rbxassetid://92435214892335]];
+G2L["2"]["Size"] = UDim2.new(0, 45, 0, 39);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundTransparency"] = 1;
+G2L["2"]["Position"] = UDim2.new(0.27577638626098633, 0, 0.021943572908639908, 0);
+
+-- StarterGui.Menyoo.ImageLabel.DraggableGUI
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["3"]["Enabled"] = false;
+G2L["3"]["Disabled"] = true;
+G2L["3"]["Name"] = [[DraggableGUI]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Size"] = UDim2.new(0, 219, 0, 60);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Position"] = UDim2.new(-4.883587837219238, 0, -0.01503734104335308, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.normal
+G2L["5"] = Instance.new("UIGradient", G2L["4"]);
+G2L["5"]["Name"] = [[normal]];
+G2L["5"]["Rotation"] = 76;
+G2L["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 123, 167)),ColorSequenceKeypoint.new(0.723, Color3.fromRGB(0, 168, 228)),ColorSequenceKeypoint.new(0.942, Color3.fromRGB(0, 177, 241)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 188, 255))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["6"]["Size"] = UDim2.new(0, 219, 0, 216);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["6"]["Visible"] = false;
+G2L["6"]["Name"] = [[player]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.UIGradient
+G2L["7"] = Instance.new("UIGradient", G2L["6"]);
+G2L["7"]["Rotation"] = -93;
+G2L["7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["6"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.Sit
+G2L["9"] = Instance.new("TextButton", G2L["6"]);
+G2L["9"]["LineHeight"] = 1.0199999809265137;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["9"]["Name"] = [[Sit]];
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[  Sit  >]];
+G2L["9"]["Position"] = UDim2.new(0, 0, 0.24400000274181366, 1);
+G2L["9"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.ar
+G2L["a"] = Instance.new("TextButton", G2L["6"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["a"]["Name"] = [[ar]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[  Auto Rotate]];
+G2L["a"]["Position"] = UDim2.new(0, 0, 0.49300000071525574, 1);
+G2L["a"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.ar.Frame
+G2L["b"] = Instance.new("Frame", G2L["a"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(34, 155, 0);
+G2L["b"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.ar.Frame.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.back
+G2L["d"] = Instance.new("TextButton", G2L["6"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["d"]["Name"] = [[back]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[  < Back]];
+G2L["d"]["Position"] = UDim2.new(0, 0, 0.8669999837875366, 2);
+G2L["d"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.godmode
+G2L["e"] = Instance.new("TextButton", G2L["6"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["e"]["Name"] = [[godmode]];
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[  God Mode]];
+G2L["e"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.godmode.Frame
+G2L["f"] = Instance.new("Frame", G2L["e"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(227, 0, 0);
+G2L["f"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.godmode.Frame.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.jh
+G2L["11"] = Instance.new("TextButton", G2L["6"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["11"]["Name"] = [[jh]];
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[ Jump Height                                    <50>]];
+G2L["11"]["Position"] = UDim2.new(0, 0, 0.11948147416114807, 1);
+G2L["11"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.ks
+G2L["12"] = Instance.new("TextButton", G2L["6"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["12"]["Name"] = [[ks]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[  Kil Self >]];
+G2L["12"]["Position"] = UDim2.new(0, 0, 0.621999979019165, 1);
+G2L["12"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.nwa
+G2L["13"] = Instance.new("TextButton", G2L["6"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["13"]["Name"] = [[nwa]];
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[  Freeze Animation]];
+G2L["13"]["Position"] = UDim2.new(0, 0, 0.3630000054836273, 2);
+G2L["13"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.nwa.Frame
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(227, 0, 0);
+G2L["14"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.nwa.Frame.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["14"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.ps
+G2L["16"] = Instance.new("TextButton", G2L["6"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["16"]["Name"] = [[ps]];
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[  Speed                                               <0>]];
+G2L["16"]["Position"] = UDim2.new(0, 0, 0.7465184330940247, 1);
+G2L["16"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.ImageLabel
+G2L["17"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["ScaleType"] = Enum.ScaleType.Crop;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["ImageTransparency"] = 0.5600000023841858;
+G2L["17"]["Image"] = [[rbxassetid://16485181479]];
+G2L["17"]["Size"] = UDim2.new(0, 66, 0, 60);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Rotation"] = 21;
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Position"] = UDim2.new(0.698630154132843, 0, -0.01666666753590107, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.judul
+G2L["18"] = Instance.new("TextLabel", G2L["4"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["TextSize"] = 30;
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Size"] = UDim2.new(0, 137, 0, 33);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[MENYOO]];
+G2L["18"]["Name"] = [[judul]];
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0.18721461296081543, 0, 0.21666666865348816, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time
+G2L["19"] = Instance.new("Frame", G2L["4"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["19"]["Size"] = UDim2.new(0, 219, 0, 109);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["19"]["Visible"] = false;
+G2L["19"]["Name"] = [[time]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.UIGradient
+G2L["1a"] = Instance.new("UIGradient", G2L["19"]);
+G2L["1a"]["Rotation"] = -93;
+G2L["1a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["19"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.hour
+G2L["1c"] = Instance.new("TextButton", G2L["19"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["1c"]["Name"] = [[hour]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[  Hour                                                  <0>]];
+G2L["1c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.minutes
+G2L["1d"] = Instance.new("TextButton", G2L["19"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["1d"]["Name"] = [[minutes]];
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[  Minutes                                            <0>]];
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.24199999868869781, 0);
+G2L["1d"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.second
+G2L["1e"] = Instance.new("TextButton", G2L["19"]);
+G2L["1e"]["LineHeight"] = 1.0199999809265137;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextSize"] = 14;
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["1e"]["Name"] = [[second]];
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[  Second                                              <0>]];
+G2L["1e"]["Position"] = UDim2.new(0, 0, 0.49628329277038574, 0);
+G2L["1e"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.time.st
+G2L["1f"] = Instance.new("TextButton", G2L["19"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["1f"]["Name"] = [[st]];
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[  < Back]];
+G2L["1f"]["Position"] = UDim2.new(0, 0, 0.7408257126808167, 0);
+G2L["1f"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.Sound
+G2L["20"] = Instance.new("Sound", G2L["4"]);
+G2L["20"]["SoundId"] = [[rbxassetid://9118139174]];
+G2L["20"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu
+G2L["21"] = Instance.new("Frame", G2L["4"]);
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["21"]["Size"] = UDim2.new(0, 219, 0, 283);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["21"]["Name"] = [[menu]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.UIGradient
+G2L["22"] = Instance.new("UIGradient", G2L["21"]);
+G2L["22"]["Rotation"] = -93;
+G2L["22"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.time
+G2L["23"] = Instance.new("TextButton", G2L["21"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["23"]["Name"] = [[time]];
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[  Time Option >]];
+G2L["23"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.player
+G2L["24"] = Instance.new("TextButton", G2L["21"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["24"]["Name"] = [[player]];
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[  Player Option >]];
+G2L["24"]["Position"] = UDim2.new(0, 0, 0.09540636092424393, 0);
+G2L["24"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.world
+G2L["25"] = Instance.new("TextButton", G2L["21"]);
+G2L["25"]["LineHeight"] = 1.0199999809265137;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["TextSize"] = 14;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["25"]["Name"] = [[world]];
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[  World Option >]];
+G2L["25"]["Position"] = UDim2.new(0, 0, 0.19081272184848785, 0);
+G2L["25"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.lighting
+G2L["26"] = Instance.new("TextButton", G2L["21"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["26"]["Name"] = [[lighting]];
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[  Lighting Option >]];
+G2L["26"]["Position"] = UDim2.new(0, 0, 0.2862190902233124, 0);
+G2L["26"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.sound
+G2L["27"] = Instance.new("TextButton", G2L["21"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["TextSize"] = 14;
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["27"]["Name"] = [[sound]];
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[  Sound Option >]];
+G2L["27"]["Position"] = UDim2.new(0, 0, 0.3816254436969757, 0);
+G2L["27"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.teleport
+G2L["28"] = Instance.new("TextButton", G2L["21"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["TextSize"] = 14;
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["28"]["Name"] = [[teleport]];
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[  Teleport Option >]];
+G2L["28"]["Position"] = UDim2.new(0, 0, 0.47703179717063904, 0);
+G2L["28"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.object
+G2L["29"] = Instance.new("TextButton", G2L["21"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["TextSize"] = 14;
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["29"]["Name"] = [[object]];
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[  Object Spawner >]];
+G2L["29"]["Position"] = UDim2.new(0, 0, 0.5724381804466248, 0);
+G2L["29"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.credit
+G2L["2a"] = Instance.new("TextButton", G2L["21"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["2a"]["Name"] = [[credit]];
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[  Credit >]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.6678445339202881, 0);
+G2L["2a"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.Settings
+G2L["2b"] = Instance.new("TextButton", G2L["21"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["2b"]["Name"] = [[Settings]];
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[  Settings >]];
+G2L["2b"]["Position"] = UDim2.new(0, 0, 0.7632508873939514, 0);
+G2L["2b"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.back
+G2L["2c"] = Instance.new("TextButton", G2L["21"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["2c"]["Name"] = [[back]];
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[  < Back]];
+G2L["2c"]["Position"] = UDim2.new(0, 0, 0.8586572408676147, 0);
+G2L["2c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.menu
+G2L["2d"] = Instance.new("LocalScript", G2L["21"]);
+G2L["2d"]["Name"] = [[menu]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.BoolValue
+G2L["2e"] = Instance.new("LocalScript", G2L["21"]);
+G2L["2e"]["Enabled"] = false;
+G2L["2e"]["Disabled"] = true;
+G2L["2e"]["Name"] = [[BoolValue]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world
+G2L["2f"] = Instance.new("Frame", G2L["4"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["2f"]["Size"] = UDim2.new(0, 219, 0, 186);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["2f"]["Visible"] = false;
+G2L["2f"]["Name"] = [[world]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.UIGradient
+G2L["30"] = Instance.new("UIGradient", G2L["2f"]);
+G2L["30"]["Rotation"] = -93;
+G2L["30"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.LocalScript
+G2L["31"] = Instance.new("LocalScript", G2L["2f"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.back
+G2L["32"] = Instance.new("TextButton", G2L["2f"]);
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextSize"] = 14;
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["32"]["Name"] = [[back]];
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[  < Back]];
+G2L["32"]["Position"] = UDim2.new(0, 0, 0.7237437963485718, 0);
+G2L["32"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.brigh
+G2L["33"] = Instance.new("TextButton", G2L["2f"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["TextSize"] = 14;
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["33"]["Name"] = [[brigh]];
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[  Brightness                                       <1>]];
+G2L["33"]["Position"] = UDim2.new(0, 0, 0.1420000046491623, 0);
+G2L["33"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.gravity
+G2L["34"] = Instance.new("TextButton", G2L["2f"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["34"]["Name"] = [[gravity]];
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[  Gravity                                            <999>]];
+G2L["34"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.gs
+G2L["35"] = Instance.new("TextButton", G2L["2f"]);
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextSize"] = 14;
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["35"]["Name"] = [[gs]];
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Text"] = [[  Global Shadow]];
+G2L["35"]["Position"] = UDim2.new(0, 0, 0.5770000219345093, 1);
+G2L["35"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.gs.Frame
+G2L["36"] = Instance.new("Frame", G2L["35"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(34, 155, 0);
+G2L["36"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.gs.Frame.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["36"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.rt
+G2L["38"] = Instance.new("TextButton", G2L["2f"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["38"]["Name"] = [[rt]];
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[  Fast Respawn(Experimental)]];
+G2L["38"]["Position"] = UDim2.new(0, 0, 0.4350047707557678, 0);
+G2L["38"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.rt.Frame
+G2L["39"] = Instance.new("Frame", G2L["38"]);
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(227, 0, 0);
+G2L["39"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.rt.Frame.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["39"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.world.shs
+G2L["3b"] = Instance.new("TextButton", G2L["2f"]);
+G2L["3b"]["LineHeight"] = 1.0199999809265137;
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["3b"]["Name"] = [[shs]];
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[  Shadow Softness                          <1>]];
+G2L["3b"]["Position"] = UDim2.new(0, 0, 0.28700000047683716, 0);
+G2L["3b"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting
+G2L["3c"] = Instance.new("Frame", G2L["4"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["3c"]["Size"] = UDim2.new(0, 219, 0, 112);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["3c"]["Visible"] = false;
+G2L["3c"]["Name"] = [[lighting]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.UIGradient
+G2L["3d"] = Instance.new("UIGradient", G2L["3c"]);
+G2L["3d"]["Rotation"] = -93;
+G2L["3d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.LocalScript
+G2L["3e"] = Instance.new("LocalScript", G2L["3c"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.back
+G2L["3f"] = Instance.new("TextButton", G2L["3c"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["3f"]["Name"] = [[back]];
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Text"] = [[  < Back]];
+G2L["3f"]["Position"] = UDim2.new(0, 0, 0.7237189412117004, 0);
+G2L["3f"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.eds
+G2L["40"] = Instance.new("TextButton", G2L["3c"]);
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["TextSize"] = 14;
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["40"]["Name"] = [[eds]];
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[  EnvironmetDiffuseScale              <1>]];
+G2L["40"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.exc
+G2L["41"] = Instance.new("TextButton", G2L["3c"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["TextSize"] = 14;
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["41"]["Name"] = [[exc]];
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[  ExposureCompensation               <0>]];
+G2L["41"]["Position"] = UDim2.new(0, 0, 0.23826353251934052, 0);
+G2L["41"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.ggl
+G2L["42"] = Instance.new("TextButton", G2L["3c"]);
+G2L["42"]["LineHeight"] = 1.0199999809265137;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["TextSize"] = 14;
+G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["42"]["Name"] = [[ggl]];
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[  GeographicLatittude                     <1>]];
+G2L["42"]["Position"] = UDim2.new(0, 0, 0.47699999809265137, 0);
+G2L["42"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds
+G2L["43"] = Instance.new("Frame", G2L["4"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["43"]["Size"] = UDim2.new(0, 219, 0, 196);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["43"]["Visible"] = false;
+G2L["43"]["Name"] = [[sounds]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.UIGradient
+G2L["44"] = Instance.new("UIGradient", G2L["43"]);
+G2L["44"]["Rotation"] = -93;
+G2L["44"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.LocalScript
+G2L["45"] = Instance.new("LocalScript", G2L["43"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.middata
+G2L["46"] = Instance.new("TextLabel", G2L["43"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[142376088]];
+G2L["46"]["Name"] = [[middata]];
+G2L["46"]["Visible"] = false;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.Sound
+G2L["47"] = Instance.new("Sound", G2L["43"]);
+G2L["47"]["Looped"] = true;
+G2L["47"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.back
+G2L["48"] = Instance.new("TextButton", G2L["43"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["TextSize"] = 14;
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["48"]["Name"] = [[back]];
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[  < Back]];
+G2L["48"]["Position"] = UDim2.new(0, 0, 0.8275401592254639, 0);
+G2L["48"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.loop
+G2L["49"] = Instance.new("TextButton", G2L["43"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["49"]["Name"] = [[loop]];
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[  Loop]];
+G2L["49"]["Position"] = UDim2.new(0, 0, 0.41377007961273193, 0);
+G2L["49"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.loop.Frame
+G2L["4a"] = Instance.new("Frame", G2L["49"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(34, 155, 0);
+G2L["4a"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.loop.Frame.UICorner
+G2L["4b"] = Instance.new("UICorner", G2L["4a"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.mid
+G2L["4c"] = Instance.new("TextButton", G2L["43"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["4c"]["Name"] = [[mid]];
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[   Music ID]];
+G2L["4c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.mid.input
+G2L["4d"] = Instance.new("TextBox", G2L["4c"]);
+G2L["4d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextSize"] = 14;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["PlaceholderText"] = [[<142376088>]];
+G2L["4d"]["Size"] = UDim2.new(0, 77, 0, 27);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[<142376088>]];
+G2L["4d"]["Position"] = UDim2.new(0.5936073064804077, 0, 0, 0);
+G2L["4d"]["Name"] = [[input]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.pb
+G2L["4e"] = Instance.new("TextButton", G2L["43"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["TextSize"] = 14;
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["4e"]["Name"] = [[pb]];
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Text"] = [[  PlayBackSpeed                              <20>]];
+G2L["4e"]["Position"] = UDim2.new(0, 0, 0.5499927997589111, 0);
+G2L["4e"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.sm
+G2L["4f"] = Instance.new("TextButton", G2L["43"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["4f"]["Name"] = [[sm]];
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[  Start Music >]];
+G2L["4f"]["Position"] = UDim2.new(0, 0, 0.1362226903438568, 0);
+G2L["4f"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.smp
+G2L["50"] = Instance.new("TextButton", G2L["43"]);
+G2L["50"]["LineHeight"] = 1.0199999809265137;
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["50"]["Name"] = [[smp]];
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[  Stop Music >]];
+G2L["50"]["Position"] = UDim2.new(0, 0, 0.2720000147819519, 1);
+G2L["50"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.volume
+G2L["51"] = Instance.new("TextButton", G2L["43"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["TextSize"] = 14;
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["51"]["Name"] = [[volume]];
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Text"] = [[  Volume                                             <1>]];
+G2L["51"]["Position"] = UDim2.new(0, 0, 0.6859999895095825, 0);
+G2L["51"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport
+G2L["52"] = Instance.new("Frame", G2L["4"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["52"]["Size"] = UDim2.new(0, 219, 0, 124);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["52"]["Visible"] = false;
+G2L["52"]["Name"] = [[teleport]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.UIGradient
+G2L["53"] = Instance.new("UIGradient", G2L["52"]);
+G2L["53"]["Rotation"] = -93;
+G2L["53"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.coord
+G2L["54"] = Instance.new("TextButton", G2L["52"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["TextSize"] = 14;
+G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["54"]["Name"] = [[coord]];
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[  Coordinates >]];
+G2L["54"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.st
+G2L["55"] = Instance.new("TextButton", G2L["52"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["55"]["Name"] = [[st]];
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[  Start Teleport >]];
+G2L["55"]["Position"] = UDim2.new(0, 0, 0.21435485780239105, 0);
+G2L["55"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.back
+G2L["56"] = Instance.new("TextButton", G2L["52"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["TextSize"] = 14;
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["56"]["Name"] = [[back]];
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Text"] = [[  < Back]];
+G2L["56"]["Position"] = UDim2.new(0, 0, 0.6340000033378601, 2);
+G2L["56"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.LocalScript
+G2L["57"] = Instance.new("LocalScript", G2L["52"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.tp
+G2L["58"] = Instance.new("TextButton", G2L["52"]);
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["TextColor3"] = Color3.fromRGB(230, 0, 0);
+G2L["58"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["58"]["Name"] = [[tp]];
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[  Teleport To Baseplate >]];
+G2L["58"]["Position"] = UDim2.new(0, 0, 0.41999998688697815, 2);
+G2L["58"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord
+G2L["59"] = Instance.new("Frame", G2L["4"]);
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["59"]["Size"] = UDim2.new(0, 219, 0, 109);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["59"]["Visible"] = false;
+G2L["59"]["Name"] = [[tcoord]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.UIGradient
+G2L["5a"] = Instance.new("UIGradient", G2L["59"]);
+G2L["5a"]["Rotation"] = -93;
+G2L["5a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.LocalScript
+G2L["5b"] = Instance.new("LocalScript", G2L["59"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.x
+G2L["5c"] = Instance.new("TextButton", G2L["59"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["TextSize"] = 14;
+G2L["5c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["5c"]["Name"] = [[x]];
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["Text"] = [[  X]];
+G2L["5c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.x.TextBox
+G2L["5d"] = Instance.new("TextBox", G2L["5c"]);
+G2L["5d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["TextSize"] = 14;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5d"]["BackgroundTransparency"] = 1;
+G2L["5d"]["PlaceholderText"] = [[<0>]];
+G2L["5d"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Text"] = [[<0>]];
+G2L["5d"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.y
+G2L["5e"] = Instance.new("TextButton", G2L["59"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["5e"]["Name"] = [[y]];
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[  Y]];
+G2L["5e"]["Position"] = UDim2.new(0, 0, 0.24199999868869781, 0);
+G2L["5e"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.y.TextBox
+G2L["5f"] = Instance.new("TextBox", G2L["5e"]);
+G2L["5f"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["BackgroundTransparency"] = 1;
+G2L["5f"]["PlaceholderText"] = [[<0>]];
+G2L["5f"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[<0>]];
+G2L["5f"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.z
+G2L["60"] = Instance.new("TextButton", G2L["59"]);
+G2L["60"]["LineHeight"] = 1.0199999809265137;
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["TextSize"] = 14;
+G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["60"]["Name"] = [[z]];
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Text"] = [[  Z]];
+G2L["60"]["Position"] = UDim2.new(0, 0, 0.49628329277038574, 0);
+G2L["60"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.z.TextBox
+G2L["61"] = Instance.new("TextBox", G2L["60"]);
+G2L["61"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextSize"] = 14;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["PlaceholderText"] = [[<0>]];
+G2L["61"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Text"] = [[]];
+G2L["61"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.back
+G2L["62"] = Instance.new("TextButton", G2L["59"]);
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["TextSize"] = 14;
+G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["62"]["Name"] = [[back]];
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Text"] = [[  < Back]];
+G2L["62"]["Position"] = UDim2.new(0, 0, 0.7408257126808167, 0);
+G2L["62"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.ungu
+G2L["63"] = Instance.new("UIGradient", G2L["4"]);
+G2L["63"]["Enabled"] = false;
+G2L["63"]["Name"] = [[ungu]];
+G2L["63"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(171, 0, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(116, 0, 173))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object
+G2L["64"] = Instance.new("Frame", G2L["4"]);
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["64"]["Size"] = UDim2.new(0, 219, 0, 185);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["64"]["Visible"] = false;
+G2L["64"]["Name"] = [[object]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.UIGradient
+G2L["65"] = Instance.new("UIGradient", G2L["64"]);
+G2L["65"]["Rotation"] = -93;
+G2L["65"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.LocalScript
+G2L["66"] = Instance.new("LocalScript", G2L["64"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.oidata
+G2L["67"] = Instance.new("TextLabel", G2L["64"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["67"]["TextSize"] = 14;
+G2L["67"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Text"] = [[Part]];
+G2L["67"]["Name"] = [[oidata]];
+G2L["67"]["Visible"] = false;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.back
+G2L["68"] = Instance.new("TextButton", G2L["64"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["TextSize"] = 14;
+G2L["68"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["68"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["68"]["Name"] = [[back]];
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Text"] = [[  < Back]];
+G2L["68"]["Position"] = UDim2.new(0, 0, 0.7229999899864197, 1);
+G2L["68"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.cc
+G2L["69"] = Instance.new("TextButton", G2L["64"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["TextSize"] = 14;
+G2L["69"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["69"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["69"]["Name"] = [[cc]];
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Text"] = [[  CanCollide]];
+G2L["69"]["Position"] = UDim2.new(0, 0, 0.4353916347026825, 0);
+G2L["69"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.cc.Frame
+G2L["6a"] = Instance.new("Frame", G2L["69"]);
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(34, 155, 0);
+G2L["6a"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.cc.Frame.UICorner
+G2L["6b"] = Instance.new("UICorner", G2L["6a"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.oid
+G2L["6c"] = Instance.new("TextButton", G2L["64"]);
+G2L["6c"]["BorderSizePixel"] = 0;
+G2L["6c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["TextSize"] = 14;
+G2L["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["6c"]["Name"] = [[oid]];
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Text"] = [[  ModelID]];
+G2L["6c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.oid.input
+G2L["6d"] = Instance.new("TextBox", G2L["6c"]);
+G2L["6d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["TextSize"] = 14;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6d"]["PlaceholderText"] = [[<Part>]];
+G2L["6d"]["Size"] = UDim2.new(0, 77, 0, 27);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[]];
+G2L["6d"]["Position"] = UDim2.new(0.6712328791618347, 0, -0.03703703731298447, 0);
+G2L["6d"]["Name"] = [[input]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.pb
+G2L["6e"] = Instance.new("TextButton", G2L["64"]);
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["TextSize"] = 14;
+G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["6e"]["Name"] = [[pb]];
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Text"] = [[  Color >]];
+G2L["6e"]["Position"] = UDim2.new(0, 0, 0.5770000219345093, 1);
+G2L["6e"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.sm
+G2L["6f"] = Instance.new("TextButton", G2L["64"]);
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["TextSize"] = 14;
+G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["6f"]["Name"] = [[sm]];
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[  Summon  >]];
+G2L["6f"]["Position"] = UDim2.new(0, 0, 0.1420000046491623, 1);
+G2L["6f"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.anker
+G2L["70"] = Instance.new("TextButton", G2L["64"]);
+G2L["70"]["LineHeight"] = 1.0199999809265137;
+G2L["70"]["BorderSizePixel"] = 0;
+G2L["70"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["TextSize"] = 14;
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["70"]["Name"] = [[anker]];
+G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["Text"] = [[  Anchor]];
+G2L["70"]["Position"] = UDim2.new(0, 0, 0.2882162630558014, 1);
+G2L["70"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.anker.Frame
+G2L["71"] = Instance.new("Frame", G2L["70"]);
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(34, 155, 0);
+G2L["71"]["Size"] = UDim2.new(0, 25, 0, 16);
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Position"] = UDim2.new(0.8675799369812012, 0, 0.18518517911434174, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.object.anker.Frame.UICorner
+G2L["72"] = Instance.new("UICorner", G2L["71"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.notify
+G2L["73"] = Instance.new("Sound", G2L["4"]);
+G2L["73"]["Name"] = [[notify]];
+G2L["73"]["SoundId"] = [[rbxassetid://7383525713]];
+G2L["73"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb
+G2L["74"] = Instance.new("Frame", G2L["4"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["74"]["Size"] = UDim2.new(0, 219, 0, 109);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["74"]["Visible"] = false;
+G2L["74"]["Name"] = [[rgb]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.UIGradient
+G2L["75"] = Instance.new("UIGradient", G2L["74"]);
+G2L["75"]["Rotation"] = -93;
+G2L["75"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.LocalScript
+G2L["76"] = Instance.new("LocalScript", G2L["74"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.r
+G2L["77"] = Instance.new("TextButton", G2L["74"]);
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["TextSize"] = 14;
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["77"]["Name"] = [[r]];
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[  R]];
+G2L["77"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.r.TextBox
+G2L["78"] = Instance.new("TextBox", G2L["77"]);
+G2L["78"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["TextSize"] = 14;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["78"]["BackgroundTransparency"] = 1;
+G2L["78"]["PlaceholderText"] = [[<0>]];
+G2L["78"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Text"] = [[0]];
+G2L["78"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.g
+G2L["79"] = Instance.new("TextButton", G2L["74"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["TextSize"] = 14;
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["79"]["Name"] = [[g]];
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Text"] = [[  G]];
+G2L["79"]["Position"] = UDim2.new(0, 0, 0.24199999868869781, 0);
+G2L["79"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.g.TextBox
+G2L["7a"] = Instance.new("TextBox", G2L["79"]);
+G2L["7a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["TextSize"] = 14;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["BackgroundTransparency"] = 1;
+G2L["7a"]["PlaceholderText"] = [[<0>]];
+G2L["7a"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Text"] = [[0]];
+G2L["7a"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.b
+G2L["7b"] = Instance.new("TextButton", G2L["74"]);
+G2L["7b"]["LineHeight"] = 1.0199999809265137;
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["TextSize"] = 14;
+G2L["7b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["7b"]["Name"] = [[b]];
+G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["Text"] = [[  B]];
+G2L["7b"]["Position"] = UDim2.new(0, 0, 0.49628329277038574, 0);
+G2L["7b"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.b.TextBox
+G2L["7c"] = Instance.new("TextBox", G2L["7b"]);
+G2L["7c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["TextSize"] = 14;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7c"]["BackgroundTransparency"] = 1;
+G2L["7c"]["PlaceholderText"] = [[<0>]];
+G2L["7c"]["Size"] = UDim2.new(0, 70, 0, 28);
+G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Text"] = [[0]];
+G2L["7c"]["Position"] = UDim2.new(0.6803653240203857, 0, 0, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.back
+G2L["7d"] = Instance.new("TextButton", G2L["74"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["TextSize"] = 14;
+G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["7d"]["Name"] = [[back]];
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Text"] = [[  < Back]];
+G2L["7d"]["Position"] = UDim2.new(0, 0, 0.7408257126808167, 0);
+G2L["7d"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit
+G2L["7e"] = Instance.new("Frame", G2L["4"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["7e"]["Size"] = UDim2.new(0, 219, 0, 144);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["7e"]["Visible"] = false;
+G2L["7e"]["Name"] = [[credit]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.UIGradient
+G2L["7f"] = Instance.new("UIGradient", G2L["7e"]);
+G2L["7f"]["Rotation"] = -93;
+G2L["7f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.LocalScript
+G2L["80"] = Instance.new("LocalScript", G2L["7e"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.sizedata
+G2L["81"] = Instance.new("TextLabel", G2L["7e"]);
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["81"]["TextSize"] = 14;
+G2L["81"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Text"] = [[Medium]];
+G2L["81"]["Name"] = [[sizedata]];
+G2L["81"]["Visible"] = false;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.back
+G2L["82"] = Instance.new("TextButton", G2L["7e"]);
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["TextSize"] = 14;
+G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["82"]["Name"] = [[back]];
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Text"] = [[  < Back]];
+G2L["82"]["Position"] = UDim2.new(0, 0, 0.7239999771118164, 4);
+G2L["82"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.tp
+G2L["83"] = Instance.new("TextButton", G2L["7e"]);
+G2L["83"]["BorderSizePixel"] = 0;
+G2L["83"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["83"]["TextSize"] = 14;
+G2L["83"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["83"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["83"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["83"]["Name"] = [[tp]];
+G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["83"]["Text"] = [[  Made In                             <Indonesian>]];
+G2L["83"]["Position"] = UDim2.new(0, 0, 0.546999990940094, 2);
+G2L["83"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.author
+G2L["84"] = Instance.new("TextButton", G2L["7e"]);
+G2L["84"]["BorderSizePixel"] = 0;
+G2L["84"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["TextSize"] = 14;
+G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["84"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["84"]["Name"] = [[author]];
+G2L["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["84"]["Text"] = [[  Author                             <MC Kuadrat>]];
+G2L["84"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.sm
+G2L["85"] = Instance.new("TextButton", G2L["7e"]);
+G2L["85"]["BorderSizePixel"] = 0;
+G2L["85"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["TextSize"] = 14;
+G2L["85"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["85"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["85"]["Name"] = [[sm]];
+G2L["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["85"]["Text"] = [[  Inspired By      <GTA 5 Menyoo MOD>]];
+G2L["85"]["Position"] = UDim2.new(0, 0, 0.1767222136259079, 1);
+G2L["85"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.Channel
+G2L["86"] = Instance.new("TextButton", G2L["7e"]);
+G2L["86"]["LineHeight"] = 1.0199999809265137;
+G2L["86"]["BorderSizePixel"] = 0;
+G2L["86"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["TextSize"] = 14;
+G2L["86"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["86"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["86"]["Name"] = [[Channel]];
+G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["86"]["Text"] = [[  Youtube Channel          <MC Kuadrat>]];
+G2L["86"]["Position"] = UDim2.new(0, 0, 0.3580000102519989, 2);
+G2L["86"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting
+G2L["87"] = Instance.new("Frame", G2L["4"]);
+G2L["87"]["BorderSizePixel"] = 0;
+G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["87"]["BackgroundTransparency"] = 0.4000000059604645;
+G2L["87"]["Size"] = UDim2.new(0, 219, 0, 69);
+G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["87"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["87"]["Visible"] = false;
+G2L["87"]["Name"] = [[setting]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.UIGradient
+G2L["88"] = Instance.new("UIGradient", G2L["87"]);
+G2L["88"]["Rotation"] = -93;
+G2L["88"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(135, 135, 135)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(75, 75, 75))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.LocalScript
+G2L["89"] = Instance.new("LocalScript", G2L["87"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.sizedata
+G2L["8a"] = Instance.new("TextLabel", G2L["87"]);
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8a"]["TextSize"] = 14;
+G2L["8a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Text"] = [[Medium]];
+G2L["8a"]["Name"] = [[sizedata]];
+G2L["8a"]["Visible"] = false;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.back
+G2L["8b"] = Instance.new("TextButton", G2L["87"]);
+G2L["8b"]["BorderSizePixel"] = 0;
+G2L["8b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["TextSize"] = 14;
+G2L["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["8b"]["Name"] = [[back]];
+G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["Text"] = [[  < Back]];
+G2L["8b"]["Position"] = UDim2.new(0, 0, 0.32846853137016296, 4);
+G2L["8b"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.Guip
+G2L["8c"] = Instance.new("TextButton", G2L["87"]);
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["8c"]["Name"] = [[Guip]];
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[  Gui Position >]];
+G2L["8c"]["BackgroundTransparency"] = 0.8999999761581421;
+
+-- StarterGui.Menyoo.ImageLabel.Frame.dm
+G2L["8d"] = Instance.new("Frame", G2L["4"]);
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["Size"] = UDim2.new(0, 219, 0, 23);
+G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["Position"] = UDim2.new(0, 0, 5.5, 0);
+G2L["8d"]["Name"] = [[dm]];
+
+-- StarterGui.Menyoo.ImageLabel.Frame.dm.normal
+G2L["8e"] = Instance.new("UIGradient", G2L["8d"]);
+G2L["8e"]["Name"] = [[normal]];
+G2L["8e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 123, 167)),ColorSequenceKeypoint.new(0.723, Color3.fromRGB(0, 168, 228)),ColorSequenceKeypoint.new(0.942, Color3.fromRGB(0, 177, 241)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 188, 255))};
+
+-- StarterGui.Menyoo.ImageLabel.Frame.dm.TextLabel
+G2L["8f"] = Instance.new("TextLabel", G2L["8d"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8f"]["TextSize"] = 14;
+G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Text"] = [[1/10]];
+G2L["8f"]["BackgroundTransparency"] = 1;
+G2L["8f"]["Position"] = UDim2.new(0.45205479860305786, 0, -0.6086956262588501, 0);
+
+-- StarterGui.Menyoo.ImageLabel.Frame.dm.ungu
+G2L["90"] = Instance.new("UIGradient", G2L["8d"]);
+G2L["90"]["Enabled"] = false;
+G2L["90"]["Name"] = [[ungu]];
+G2L["90"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(171, 0, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(116, 0, 173))};
+
+-- StarterGui.Menyoo.close
+G2L["91"] = Instance.new("TextButton", G2L["1"]);
+G2L["91"]["TextWrapped"] = true;
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["TextScaled"] = true;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["TextSize"] = 14;
+G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["91"]["TextColor3"] = Color3.fromRGB(0, 193, 223);
+G2L["91"]["Visible"] = false;
+G2L["91"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["91"]["Name"] = [[close]];
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["Text"] = [[M]];
+G2L["91"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Menyoo.close.UIStroke
+G2L["92"] = Instance.new("UIStroke", G2L["91"]);
+G2L["92"]["Color"] = Color3.fromRGB(0, 14, 132);
+G2L["92"]["Thickness"] = 3.4000000953674316;
+
+-- StarterGui.Menyoo.close.DraggableGUI
+G2L["93"] = Instance.new("LocalScript", G2L["91"]);
+G2L["93"]["Name"] = [[DraggableGUI]];
+
+-- StarterGui.Menyoo.close.LocalScript
+G2L["94"] = Instance.new("LocalScript", G2L["91"]);
+
+
+-- StarterGui.Menyoo.ImageLabel.Frame.player.LocalScript
+local function C_8()
+local script = G2L["8"];
+	local menu = script.Parent
+	local repet = game:GetService("RunService")
+	
+	local jumph = 50
+	local sv = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+	
+	menu.ps.Text = "  Speed                                               <"..sv..">"
+	
+	menu.godmode.MouseButton1Up:Connect(function()
+		if menu.godmode.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			menu.godmode.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			menu.godmode.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+			wait(0.5)
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").Health = 100
+			char:WaitForChild("Humanoid").MaxHealth = 100
+		end
+	end)
+	
+	menu.jh.MouseButton1Up:Connect(function()
+		if jumph < 180 then
+			jumph = jumph + 1
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").JumpPower = jumph
+			script.Parent.Parent.Sound:Play()
+			menu.jh.Text = " Jump Height                                    <"..jumph..">"
+		else
+			script.Parent.Parent.Sound:Play()
+			jumph = 0
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").JumpPower = jumph
+			menu.jh.Text = " Jump Height                                    <"..jumph..">"
+		end
+	end)
+	
+	menu.Sit.MouseButton1Up:Connect(function()
+		local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+		char:WaitForChild("Humanoid").Sit = true
+	end)
+	
+	menu.ar.MouseButton1Up:Connect(function()
+		if menu.ar.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").AutoRotate = true
+			menu.ar.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").AutoRotate = false
+			menu.ar.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.ks.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Sound:Play()
+		local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+		char:WaitForChild("Humanoid").Health = 0
+	end)
+	
+	menu.nwa.MouseButton1Up:Connect(function()
+		if menu.nwa.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			script.Parent.Parent.Sound:Play()
+			menu.nwa.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Animate").Enabled = false
+		else
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Animate").Enabled = true
+			menu.nwa.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.ps.MouseButton1Up:Connect(function()
+		if sv < 500 then
+			sv = sv + 1
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").WalkSpeed = sv
+			script.Parent.Parent.Sound:Play()
+			menu.ps.Text = "  Speed                                               <"..sv..">"
+		else
+			script.Parent.Parent.Sound:Play()
+			sv = 0
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").WalkSpeed = sv
+			menu.ps.Text = "  Speed                                               <"..sv..">"
+		end
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	repet.Heartbeat:Connect(function()
+		if menu.godmode.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+			char:WaitForChild("Humanoid").Health = 9999
+			char:WaitForChild("Humanoid").MaxHealth = 9999
+		end
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.Menyoo.ImageLabel.Frame.time.LocalScript
+local function C_1b()
+local script = G2L["1b"];
+	local scrpt = script.Parent
+	
+	local hour = game.Lighting.ClockTime
+	local minutes = 0
+	local second = 0
+	
+	scrpt.hour.Text = "  Hour                                                  <"..hour..">"
+	
+	scrpt.hour.MouseButton1Up:Connect(function()
+		if hour < 24 then
+			hour = hour + 1
+			script.Parent.Parent.Sound:Play()
+			scrpt.hour.Text = "  Hour                                                  <"..hour..">"
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+		else
+			hour = 1
+			script.Parent.Parent.Sound:Play()
+			scrpt.hour.Text = "  Hour                                                  <"..hour..">"
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+		end
+	end)
+	scrpt.minutes.MouseButton1Up:Connect(function()
+		if minutes < 59 then
+			minutes = minutes + 1
+			script.Parent.Parent.Sound:Play()
+			scrpt.minutes.Text = "  Minutes                                            <"..minutes..">"
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+		else
+			hour = hour + 1
+			script.Parent.Parent.Sound:Play()
+			minutes = 0
+			scrpt.hour.Text = "  Hour                                                  <"..hour..">"
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+			scrpt.minutes.Text = "  Minutes                                            <"..minutes..">"
+		end
+	end)
+	scrpt.second.MouseButton1Up:Connect(function()
+		if second < 59 then
+			second = second + 1
+			script.Parent.Parent.Sound:Play()
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+			scrpt.second.Text = "  Second                                              <"..second..">"
+		else
+			minutes = minutes + 1
+			script.Parent.Parent.Sound:Play()
+			second = 0
+			game.Lighting.TimeOfDay = hour..":"..minutes..":"..second
+			scrpt.minutes.Text = "  Minutes                                            <"..minutes..">"
+			scrpt.second.Text = "  Second                                              <"..second..">"
+		end
+	end)
+	
+	scrpt.st.MouseButton1Up:Connect(function()
+		scrpt.Visible = false
+		scrpt.Parent.menu.Visible = true
+		scrpt.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		scrpt.Parent.dm.TextLabel.Text = "1/10"
+		scrpt.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.Menyoo.ImageLabel.Frame.menu.menu
+local function C_2d()
+local script = G2L["2d"];
+	local menu = script.Parent
+	
+	menu.time.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.time.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 2.783, 0)
+		menu.Parent.dm.TextLabel.Text = "1/4"
+		menu.Parent.judul.Text = "Time Options"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.player.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.player.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 4.6, 0)
+		menu.Parent.dm.TextLabel.Text = "1/8"
+		menu.Parent.judul.Text = "Player Options"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.world.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.world.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0,3.717, 0)
+		menu.Parent.dm.TextLabel.Text = "1/6"
+		menu.Parent.judul.Text = "World Options"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.lighting.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.lighting.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 2.8, 0)
+		menu.Parent.dm.TextLabel.Text = "1/4"
+		menu.Parent.judul.Text = "Lighting Options"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.BackgroundColor3 = Color3.new(0.917647, 1, 0)
+		menu.Parent.dm.BackgroundColor3 = Color3.new(0.917647, 1, 0)
+		menu.Parent.ImageLabel.Image = "rbxassetid://120917706894298"
+	end)
+	
+	menu.sound.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.sounds.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 4.15, 0)
+		menu.Parent.dm.TextLabel.Text = "1/7"
+		menu.Parent.judul.Text = "Sounds Options"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.BackgroundColor3 = Color3.new(0.776471, 1, 0.709804)
+		menu.Parent.dm.BackgroundColor3 = Color3.new(0.776471, 1, 0.709804)
+		menu.Parent.ImageLabel.Image = "rbxassetid://133565608904662"
+	end)
+	
+	menu.teleport.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.teleport.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 2.783, 0)
+		menu.Parent.dm.TextLabel.Text = "1/4"
+		menu.Parent.judul.Text = "Teleport Options"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.normal.Enabled = false
+		menu.Parent.ungu.Enabled = true
+		menu.Parent.dm.normal.Enabled = false
+		menu.Parent.dm.ungu.Enabled = true
+		menu.Parent.ImageLabel.Image = "rbxassetid://6723742952"
+	end)
+	
+	menu.object.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.object.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 3.7, 0)
+		menu.Parent.dm.TextLabel.Text = "1/6"
+		menu.Parent.judul.Text = "Object Options"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.credit.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.credit.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 3.25, 0)
+		menu.Parent.dm.TextLabel.Text = "1/5"
+		menu.Parent.judul.Text = "Credit"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.Settings.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.setting.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 1.883, 0)
+		menu.Parent.dm.TextLabel.Text = "1/2"
+		menu.Parent.judul.Text = "Settings"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Parent.Parent.Parent.close.Visible = true
+		menu.Parent.Parent.Visible = false
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_2d);
+-- StarterGui.Menyoo.ImageLabel.Frame.world.LocalScript
+local function C_31()
+local script = G2L["31"];
+	local menu = script.Parent
+	local gravity = game.Workspace.Gravity
+	local bright = game.Lighting.Brightness
+	local shs = game.Lighting.ShadowSoftness
+	local rt = game.Players.RespawnTime
+	menu.shs.Text = "  Shadow Softness                           <"..shs..">"
+	menu.gravity.Text = "  Gravity                                            <"..gravity..">"
+	menu.brigh.Text = "  Brightness                                       <"..bright..">"
+	
+	if game.Lighting.GlobalShadows == true then
+		menu.gs.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+	else
+		menu.gs.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+	end
+	
+	menu.gravity.MouseButton1Up:Connect(function()
+		if gravity < 300 then
+			gravity = gravity + 1
+			script.Parent.Parent.Sound:Play()
+			game.Workspace.Gravity = gravity
+			menu.gravity.Text = "  Gravity                                            <"..gravity..">"
+		else
+			gravity = 0
+			script.Parent.Parent.Sound:Play()
+			game.Workspace.Gravity = gravity
+			menu.gravity.Text = "  Gravity                                            <"..gravity..">"
+		end
+	end)
+	
+	menu.brigh.MouseButton1Up:Connect(function()
+		if bright < 100 then
+			bright = bright + 1
+			script.Parent.Parent.Sound:Play()
+			game.Lighting.Brightness = bright
+			menu.brigh.Text = "  Brightness                                       <"..bright..">"
+		else
+			bright = 0
+			script.Parent.Parent.Sound:Play()
+			game.Lighting.Brightness = bright
+			menu.brigh.Text = "  Brightness                                       <"..bright..">"
+		end
+	end)
+	
+	menu.shs.MouseButton1Up:Connect(function()
+		if shs < 1 then
+			shs = shs + 0.1
+			script.Parent.Parent.Sound:Play()
+			game.Lighting.ShadowSoftness = shs
+			menu.shs.Text = "  Shadow Softness                           <"..shs..">"
+		else
+			shs = 0
+			script.Parent.Parent.Sound:Play()
+			game.Lighting.ShadowSoftness = shs
+			menu.shs.Text = "  Shadow Softness                           <"..shs..">"
+		end
+	end)
+	
+	menu.rt.MouseButton1Up:Connect(function()
+		if menu.rt.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			game.Players.RespawnTime = 0
+			menu.rt.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			game.Players.RespawnTime = rt
+			menu.rt.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.gs.MouseButton1Up:Connect(function()
+		if menu.gs.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			game.Lighting.GlobalShadows = true
+			menu.gs.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			menu.gs.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			game.Lighting.GlobalShadows = false
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_31);
+-- StarterGui.Menyoo.ImageLabel.Frame.lighting.LocalScript
+local function C_3e()
+local script = G2L["3e"];
+	local menu = script.Parent
+	local edsv = game.Lighting.EnvironmentDiffuseScale * 10
+	local excv = game.Lighting.ExposureCompensation
+	local grltv = game.Lighting.GeographicLatitude
+	menu.ggl.Text = "  GeographicLatittude                     <"..grltv..">"
+	menu.eds.Text = "  EnvironmetDiffuseScale              <"..edsv..">"
+	menu.exc.Text = "  ExposureCompensation               <"..excv..">"
+	
+	menu.eds.MouseButton1Up:Connect(function()
+		if edsv < 10 then
+			edsv = edsv + 1
+			menu.Parent.Sound:Play()
+			game.Lighting.EnvironmentDiffuseScale = edsv / 10
+			menu.eds.Text = "  EnvironmetDiffuseScale              <"..edsv..">"
+		else
+			edsv = 0
+			menu.Parent.Sound:Play()
+			game.Lighting.EnvironmentDiffuseScale = edsv
+			menu.eds.Text = "  EnvironmetDiffuseScale              <"..edsv..">"
+		end
+	end)
+	
+	menu.exc.MouseButton1Up:Connect(function()
+		if excv < 3 then
+			excv = excv + 1
+			menu.Parent.Sound:Play()
+			game.Lighting.ExposureCompensation = excv
+			menu.exc.Text = "  ExposureCompensation               <"..excv..">"
+		else
+			excv = -3
+			menu.Parent.Sound:Play()
+			game.Lighting.ExposureCompensation = excv
+			menu.exc.Text = "  ExposureCompensation               <"..excv..">"
+		end
+	end)
+	
+	menu.ggl.MouseButton1Up:Connect(function()
+		if grltv < 360 then
+			grltv = grltv + 1
+			menu.Parent.Sound:Play()
+			game.Lighting.GeographicLatitude = grltv
+			menu.ggl.Text = "  GeographicLatittude                     <"..grltv..">"
+		else
+			grltv = 0
+			menu.Parent.Sound:Play()
+			game.Lighting.GeographicLatitude = grltv
+			menu.ggl.Text = "  GeographicLatittude                     <"..grltv..">"
+		end
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.dm.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.ImageLabel.Image = "rbxassetid://16485181479"
+	end)
+	
+end;
+task.spawn(C_3e);
+-- StarterGui.Menyoo.ImageLabel.Frame.sounds.LocalScript
+local function C_45()
+local script = G2L["45"];
+	local menu = script.Parent
+	local repet = game:GetService("RunService")
+	local pbs = menu.Sound.PlaybackSpeed
+	local data = menu.Sound.Volume * 10
+	
+	menu.pb.Text = "  PlayBackSpeed                              <"..pbs..">"
+	menu.volume.Text = "  Volume                                             <"..data..">"
+	
+	menu.mid.MouseButton1Up:Connect(function()
+		if menu.middata.Text == "1848354536" then
+			menu.middata.Text = "1841647093"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		elseif menu.middata.Text == "1841647093" then
+			menu.middata.Text = "1837879082"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		elseif menu.middata.Text == "1837879082" then
+			menu.middata.Text = "1840684529"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		elseif menu.middata.Text == "1840684529" then
+			menu.middata.Text = "1838667764"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		elseif menu.middata.Text == "1838667764" then
+			menu.middata.Text = "142376088"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		elseif menu.middata.Text == "142376088" then
+			menu.middata.Text = "1846442964"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		else
+			menu.middata.Text = "1841647093"
+			menu.mid.input.Text = "<"..menu.middata.Text..">"
+		end
+		menu.Parent.Sound:Play()
+	end)
+	
+	menu.sm.MouseButton1Up:Connect(function()
+		menu.Sound.SoundId = "rbxassetid://"..menu.middata.Text
+		menu.Sound:Play()
+		menu.Parent.Sound:Play()
+	end)
+	
+	menu.smp.MouseButton1Up:Connect(function()
+		menu.Sound:Stop()
+		menu.Parent.Sound:Play()
+	end)
+	
+	menu.loop.MouseButton1Up:Connect(function()
+		if menu.loop.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			menu.Sound.Looped = true
+			menu.loop.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			menu.Sound.Looped = false
+			menu.loop.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.pb.MouseButton1Up:Connect(function()
+		if pbs < 20 then
+			pbs = pbs + 1
+			menu.Sound.PlaybackSpeed = pbs
+			menu.pb.Text = "  PlayBackSpeed                              <"..pbs..">"
+			script.Parent.Parent.Sound:Play()
+		else
+			pbs = 0
+			menu.Sound.PlaybackSpeed = pbs
+			menu.pb.Text = "  PlayBackSpeed                              <"..pbs..">"
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	menu.volume.MouseButton1Up:Connect(function()
+		if data < 10 then
+			data = data + 1
+			menu.Sound.Volume = data / 10
+			menu.volume.Text = "  Volume                                             <"..data..">"
+			script.Parent.Parent.Sound:Play()
+		else
+			data = 0
+			menu.Sound.Volume = data / 10
+			menu.volume.Text = "  Volume                                             <"..data..">"
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.dm.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.ImageLabel.Image = "rbxassetid://16485181479"
+	end)
+	
+	repet.Heartbeat:Connect(function()
+		wait(0.1)
+		menu.middata.Text = menu.mid.input.Text:gsub("[<>]", "")
+	end)
+end;
+task.spawn(C_45);
+-- StarterGui.Menyoo.ImageLabel.Frame.teleport.LocalScript
+local function C_57()
+local script = G2L["57"];
+	local menu = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	menu.coord.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.tcoord.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 2.783, 0)
+		menu.Parent.dm.TextLabel.Text = "1/4"
+		menu.Parent.judul.Text = "Coordinate"
+		script.Parent.Parent.Sound:Play()
+	end)
+	
+	menu.st.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Sound:Play()
+		local char = player.Character or player.CharacterAdded:Wait()
+		char:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(menu.Parent.tcoord.x.TextBox.Text, menu.Parent.tcoord.y.TextBox.Text, menu.Parent.tcoord.z.TextBox.Text)
+	end)
+	
+	menu.tp.MouseButton1Up:Connect(function()
+		if menu.Parent.menu.BoolValue.Enabled == false then
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "MENYOO", 
+				Text = "This world doesn't have a Menyoo Baseplate yet, please create it first in the Object menu", 
+				Duration = 3 
+			})
+			
+			menu.Parent.notify:Play()
+			menu.Parent.Sound:Play()
+		else
+			local char = player.Character or player.CharacterAdded:Wait()
+			char:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(0, 4515, 2)
+			menu.Parent.Sound:Play()
+		end
+	end)
+	
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		menu.Parent.ImageLabel.Image = "rbxassetid://16485181479"
+		menu.Parent.normal.Enabled = true
+		menu.Parent.ungu.Enabled = false
+		menu.Parent.dm.normal.Enabled = true
+		menu.Parent.dm.ungu.Enabled = false
+		script.Parent.Parent.Sound:Play()
+	end)
+
+end;
+task.spawn(C_57);
+-- StarterGui.Menyoo.ImageLabel.Frame.tcoord.LocalScript
+local function C_5b()
+	local script = G2L["5b"];
+	local scrpt = script.Parent
+
+	scrpt.back.MouseButton1Up:Connect(function()
+		scrpt.Visible = false
+		scrpt.Parent.teleport.Visible = true
+		scrpt.Parent.dm.Position = UDim2.new(0, 0, 2.783, 0)
+		scrpt.Parent.dm.TextLabel.Text = "1/3"
+		scrpt.Parent.judul.Text = "Teleport Options"
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_5b);
+-- StarterGui.Menyoo.ImageLabel.Frame.object.LocalScript
+local function C_66()
+	local script = G2L["66"];
+	local menu = script.Parent
+	local repet = game:GetService("RunService")
+	local angker = true
+	local canc = true
+	local rgb = menu.Parent.rgb
+	local player = game.Players.LocalPlayer
+
+	menu.oid.MouseButton1Up:Connect(function()
+		if menu.oidata.Text == "Part" then
+			menu.oidata.Text = "TrussPart"
+			menu.oid.input.Text = "<"..menu.oidata.Text..">"
+		elseif menu.oidata.Text == "TrussPart" then
+			menu.oidata.Text = "WedgePart"
+			menu.oid.input.Text = "<"..menu.oidata.Text..">"
+		elseif menu.oidata.Text == "WedgePart" then
+			menu.oidata.Text = "CornerWedgePart"
+			menu.oid.input.Text = "<"..menu.oidata.Text..">"
+		elseif menu.oidata.Text == "CornerWedgePart" then
+			menu.oidata.Text = "BasePlate"
+			menu.oid.input.Text = "<"..menu.oidata.Text..">"
+		else
+			menu.oidata.Text = "Part"
+			menu.oid.input.Text = "<"..menu.oidata.Text..">"
+		end
+		menu.Parent.Sound:Play()
+	end)
+
+	menu.sm.MouseButton1Up:Connect(function()
+		menu.oidata.Text = menu.oid.input.Text:gsub("[<>]", "")
+
+		if menu.oidata.Text == "" then
+			local r = tonumber(rgb.r.TextBox.Text) / 255
+			local g = tonumber(rgb.g.TextBox.Text) / 255
+			local b = tonumber(rgb.b.TextBox.Text) / 255
+
+			local part = Instance.new("Part")
+			part.Parent = game.Workspace
+			part.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			part.Material = Enum.Material.Plastic
+			part.CanCollide = canc
+			part.Name = "Part"
+			part.Color = Color3.new(r, g, b)
+			part.Anchored = angker
+			part.Shape = Enum.PartType.Block
+			part.Orientation = Vector3.new(0, 0, 0)
+			part.Parent = workspace
+
+			menu.Parent.Sound:Play()
+		elseif menu.oidata.Text == "BasePlate" then
+			if game.Workspace:FindFirstChild("BasePlateM") then
+				game:GetService("StarterGui"):SetCore("SendNotification", {
+					Title = "MENYOO", 
+					Text = "This world already has a MENYOO Baseplate", 
+					Duration = 3 
+				})
+
+				menu.Parent.notify:Play()
+				menu.Parent.Sound:Play()
+			else
+				local r = tonumber(rgb.r.TextBox.Text) / 255
+				local g = tonumber(rgb.g.TextBox.Text) / 255
+				local b = tonumber(rgb.b.TextBox.Text) / 255
+
+				local part = Instance.new("Part")
+				part.Parent = game.Workspace
+				part.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+				part.Material = Enum.Material.Plastic
+				part.CanCollide = true
+				part.Name = "BasePlateM"
+				part.Color = Color3.new(0.388235, 0.372549, 0.384314)
+				part.Size = Vector3.new(1024, 20, 1024)
+				part.Position = Vector3.new(0, 4500, 2)
+				part.Anchored = true
+				part.Shape = Enum.PartType.Block
+
+				local char = player.Character or player.CharacterAdded:Wait()
+				char:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(0, 4515, 2)
+				menu.Parent.Sound:Play()
+
+				menu.Parent.menu.BoolValue.Enabled = true
+				menu.Parent.teleport.tp.TextColor3 = Color3.new(1, 1, 1)
+			end
+		else
+			local r = tonumber(rgb.r.TextBox.Text) / 255
+			local g = tonumber(rgb.g.TextBox.Text) / 255
+			local b = tonumber(rgb.b.TextBox.Text) / 255 
+			local part = Instance.new(menu.oidata.Text) -- Harus "Part", bukan menu.oidata.Text
+
+			part.Parent = game.Workspace
+			part.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			part.Material = Enum.Material.Plastic
+			part.CanCollide = canc
+			part.Name = menu.oidata.Text
+			part.Anchored = angker
+			part.Color = Color3.new(r, g, b) -- Pastikan ini antara 0-1
+			part.Shape = Enum.PartType.Block
+			part.Orientation = Vector3.new(0, 0, 0)
+
+			menu.Parent.Sound:Play()
+		end
+	end)
+
+	menu.anker.MouseButton1Up:Connect(function()
+		menu.Parent.Sound:Play()
+
+		if menu.anker.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			menu.anker.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			angker = true
+		else
+			menu.anker.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			angker = false
+		end
+	end)
+
+	menu.cc.MouseButton1Up:Connect(function()
+		if menu.cc.Frame.BackgroundColor3 == Color3.new(0.886275, 0, 0) then
+			canc = true
+			menu.cc.Frame.BackgroundColor3 = Color3.new(0.129412, 0.603922, 0)
+			script.Parent.Parent.Sound:Play()
+		else
+			canc = false
+			menu.cc.Frame.BackgroundColor3 = Color3.new(0.886275, 0, 0)
+			script.Parent.Parent.Sound:Play()
+		end
+	end)
+
+	menu.pb.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.rgb.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 2.783, 0)
+		menu.Parent.dm.TextLabel.Text = "1/4"
+		menu.Parent.judul.Text = "Color"
+		menu.Parent.normal.Enabled = false
+		menu.Parent.ungu.Enabled = true
+		menu.Parent.dm.normal.Enabled = false
+		menu.Parent.dm.ungu.Enabled = true
+		script.Parent.Parent.Sound:Play()
+	end)
+
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+		menu.Parent.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.dm.BackgroundColor3 = Color3.new(1, 1, 1)
+		menu.Parent.ImageLabel.Image = "rbxassetid://16485181479"
+	end)
+end;
+task.spawn(C_66);
+-- StarterGui.Menyoo.ImageLabel.Frame.rgb.LocalScript
+local function C_76()
+	local script = G2L["76"];
+	local scrpt = script.Parent
+
+	scrpt.back.MouseButton1Up:Connect(function()
+		local r = tonumber(scrpt.r.TextBox.Text)
+		local g = tonumber(scrpt.g.TextBox.Text)
+		local b = tonumber(scrpt.b.TextBox.Text)
+
+		local rt = r
+		local gt = g
+		local bt = b
+
+		scrpt.Visible = false
+		scrpt.Parent.object.Visible = true
+		scrpt.Parent.dm.Position = UDim2.new(0, 0, 3.7, 0)
+		scrpt.Parent.dm.TextLabel.Text = "1/3"
+		scrpt.Parent.judul.Text = "Object Options"
+		scrpt.Parent.normal.Enabled = true
+		scrpt.Parent.ungu.Enabled = false
+		scrpt.Parent.dm.normal.Enabled = true
+		scrpt.Parent.dm.ungu.Enabled = false
+		script.Parent.Parent.Sound:Play()
+
+		if r > 255 then
+			scrpt.r.TextBox.Text = "255"
+		elseif r < 0 then
+			scrpt.r.TextBox.Text = "0"
+		end
+
+		if g > 255 then
+			scrpt.g.TextBox.Text = "255"
+		elseif g < 0 then
+			scrpt.g.TextBox.Text = "0"
+		end
+
+		if b > 255 then
+			scrpt.b.TextBox.Text = "255"
+		elseif b < 0 then
+			scrpt.b.TextBox.Text = "0"
+		end
+	end)
+end;
+task.spawn(C_76);
+-- StarterGui.Menyoo.ImageLabel.Frame.credit.LocalScript
+local function C_80()
+	local script = G2L["80"];
+	local menu = script.Parent
+	local auclick = 0
+
+	menu.author.MouseButton1Up:Connect(function()
+		if auclick == 11 then
+			menu.Parent.sounds.Sound.SoundId = "rbxassetid://9043828544"
+			menu.Parent.sounds.Sound:Play()
+			auclick = 0
+		else
+			auclick = auclick + 1
+			print(auclick)
+		end
+
+		menu.Parent.Sound:Play()
+	end)
+
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_80);
+-- StarterGui.Menyoo.ImageLabel.Frame.setting.LocalScript
+local function C_89()
+	local script = G2L["89"];
+	local menu = script.Parent
+	local guip = false
+
+	menu.Guip.MouseButton1Up:Connect(function()
+		if guip == true then
+			menu.Parent.Parent.DraggableGUI.Enabled = false
+			menu.Parent.Parent.ImageTransparency = 1
+			guip = false
+		else
+			menu.Parent.Parent.DraggableGUI.Enabled = true
+			menu.Parent.Parent.ImageTransparency = 0
+			guip = true
+		end
+	end)
+
+	menu.back.MouseButton1Up:Connect(function()
+		menu.Visible = false
+		menu.Parent.menu.Visible = true
+		menu.Parent.dm.Position = UDim2.new(0, 0, 5.5, 0)
+		menu.Parent.dm.TextLabel.Text = "1/10"
+		menu.Parent.judul.Text = "MENYOO"
+
+		menu.Parent.Parent.DraggableGUI.Enabled = false
+		menu.Parent.Parent.ImageTransparency = 1
+		guip = false
+
+		script.Parent.Parent.Sound:Play()
+	end)
+end;
+task.spawn(C_89);
+-- StarterGui.Menyoo.close.DraggableGUI
+local function C_93()
+	local script = G2L["93"];
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end;
+task.spawn(C_93);
+-- StarterGui.Menyoo.close.LocalScript
+local function C_94()
+	local script = G2L["94"];
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.ImageLabel.Visible = true
+		script.Parent.Parent.ImageLabel.Frame.Sound:Play()
+	end)
+end;
+task.spawn(C_94);
+
+return G2L["1"], require;
