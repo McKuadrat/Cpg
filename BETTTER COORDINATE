@@ -1,0 +1,826 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local CoordGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local base = Instance.new("Frame")
+local copy = Instance.new("TextButton")
+local save = Instance.new("TextButton")
+local coord = Instance.new("TextLabel")
+local UIStroke = Instance.new("UIStroke")
+local load = Instance.new("TextButton")
+local save_2 = Instance.new("Frame")
+local save_3 = Instance.new("TextButton")
+local cancel = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local UIStroke_2 = Instance.new("UIStroke")
+local loade = Instance.new("Frame")
+local load_2 = Instance.new("TextButton")
+local cancel_2 = Instance.new("TextButton")
+local TextBox_2 = Instance.new("TextBox")
+local UIStroke_3 = Instance.new("UIStroke")
+local load_3 = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local close = Instance.new("TextButton")
+local GetToken = Instance.new("TextButton")
+local LoadToken = Instance.new("TextButton")
+local destroyp = Instance.new("TextButton")
+local minimize = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local key = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
+local UICorner = Instance.new("UICorner")
+local TextBox_3 = Instance.new("TextBox")
+local UIStroke_5 = Instance.new("UIStroke")
+local UICorner_2 = Instance.new("UICorner")
+local submit = Instance.new("TextButton")
+local UIStroke_6 = Instance.new("UIStroke")
+local UICorner_3 = Instance.new("UICorner")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UIStroke_7 = Instance.new("UIStroke")
+local UICorner_4 = Instance.new("UICorner")
+local copy_2 = Instance.new("TextButton")
+local UIStroke_8 = Instance.new("UIStroke")
+local UICorner_5 = Instance.new("UICorner")
+local bypass = Instance.new("TextButton")
+local UIStroke_9 = Instance.new("UIStroke")
+local UICorner_6 = Instance.new("UICorner")
+
+-- Properties:
+
+CoordGui.Name = "CoordGui"
+CoordGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CoordGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+CoordGui.ResetOnSpawn = false
+
+Frame.Parent = CoordGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.0573566072, 0, 0.058441557, 0)
+Frame.Size = UDim2.new(0, 287, 0, 25)
+Frame.Visible = false
+
+base.Name = "base"
+base.Parent = Frame
+base.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+base.BorderColor3 = Color3.fromRGB(255, 255, 255)
+base.Position = UDim2.new(0, 0, 1, 0)
+base.Size = UDim2.new(0, 287, 0, 201)
+
+copy.Name = "copy"
+copy.Parent = base
+copy.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+copy.BorderColor3 = Color3.fromRGB(255, 255, 255)
+copy.Position = UDim2.new(0.062717773, 0, 0.447761208, 0)
+copy.Size = UDim2.new(0, 101, 0, 50)
+copy.Font = Enum.Font.SourceSans
+copy.Text = "COPY"
+copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+copy.TextScaled = true
+copy.TextSize = 14.000
+copy.TextWrapped = true
+
+save.Name = "save"
+save.Parent = base
+save.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+save.BorderColor3 = Color3.fromRGB(255, 255, 255)
+save.Position = UDim2.new(0.578397214, 0, 0.447761208, 0)
+save.Size = UDim2.new(0, 101, 0, 50)
+save.Font = Enum.Font.SourceSans
+save.Text = "SAVE"
+save.TextColor3 = Color3.fromRGB(255, 255, 255)
+save.TextScaled = true
+save.TextSize = 14.000
+save.TextWrapped = true
+
+coord.Name = "coord"
+coord.Parent = base
+coord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+coord.BackgroundTransparency = 0.750
+coord.BorderColor3 = Color3.fromRGB(255, 255, 255)
+coord.BorderSizePixel = 0
+coord.Position = UDim2.new(0.149825782, 0, 0.124378107, 0)
+coord.Size = UDim2.new(0, 200, 0, 50)
+coord.Font = Enum.Font.SourceSans
+coord.Text = "0, 0, 0"
+coord.TextColor3 = Color3.fromRGB(255, 255, 255)
+coord.TextScaled = true
+coord.TextSize = 14.000
+coord.TextWrapped = true
+
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Parent = coord
+
+load.Name = "load"
+load.Parent = base
+load.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+load.BorderColor3 = Color3.fromRGB(255, 255, 255)
+load.Position = UDim2.new(0.063000001, 0, 0.731000006, 0)
+load.Size = UDim2.new(0, 101, 0, 50)
+load.Font = Enum.Font.SourceSans
+load.Text = "LOAD"
+load.TextColor3 = Color3.fromRGB(255, 255, 255)
+load.TextScaled = true
+load.TextSize = 14.000
+load.TextWrapped = true
+
+save_2.Name = "save"
+save_2.Parent = Frame
+save_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+save_2.Position = UDim2.new(0, 0, 1, 0)
+save_2.Size = UDim2.new(0, 287, 0, 201)
+save_2.Visible = false
+
+save_3.Name = "save"
+save_3.Parent = save_2
+save_3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+save_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+save_3.Position = UDim2.new(0.062717773, 0, 0.547263682, 0)
+save_3.Size = UDim2.new(0, 101, 0, 50)
+save_3.Font = Enum.Font.SourceSans
+save_3.Text = "SAVE"
+save_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+save_3.TextScaled = true
+save_3.TextSize = 14.000
+save_3.TextWrapped = true
+
+cancel.Name = "cancel"
+cancel.Parent = save_2
+cancel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cancel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+cancel.Position = UDim2.new(0.567944229, 0, 0.547263682, 0)
+cancel.Size = UDim2.new(0, 101, 0, 50)
+cancel.Font = Enum.Font.SourceSans
+cancel.Text = "CANCEL"
+cancel.TextColor3 = Color3.fromRGB(255, 255, 255)
+cancel.TextScaled = true
+cancel.TextSize = 14.000
+cancel.TextWrapped = true
+
+TextBox.Parent = save_2
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 0.750
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.150000006, 0, 0.123999998, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Name"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Parent = TextBox
+
+loade.Name = "loade"
+loade.Parent = Frame
+loade.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+loade.BorderColor3 = Color3.fromRGB(255, 255, 255)
+loade.Position = UDim2.new(0, 0, 1, 0)
+loade.Size = UDim2.new(0, 287, 0, 201)
+loade.Visible = false
+
+load_2.Name = "load"
+load_2.Parent = loade
+load_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+load_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+load_2.Position = UDim2.new(0.062717773, 0, 0.547263682, 0)
+load_2.Size = UDim2.new(0, 101, 0, 50)
+load_2.Font = Enum.Font.SourceSans
+load_2.Text = "LOAD"
+load_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+load_2.TextScaled = true
+load_2.TextSize = 14.000
+load_2.TextWrapped = true
+
+cancel_2.Name = "cancel"
+cancel_2.Parent = loade
+cancel_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cancel_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+cancel_2.Position = UDim2.new(0.567944229, 0, 0.547263682, 0)
+cancel_2.Size = UDim2.new(0, 101, 0, 50)
+cancel_2.Font = Enum.Font.SourceSans
+cancel_2.Text = "CANCEL"
+cancel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+cancel_2.TextScaled = true
+cancel_2.TextSize = 14.000
+cancel_2.TextWrapped = true
+
+TextBox_2.Parent = loade
+TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.BackgroundTransparency = 0.750
+TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.150000006, 0, 0.123999998, 0)
+TextBox_2.Size = UDim2.new(0, 200, 0, 50)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.PlaceholderText = "Token"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Parent = TextBox_2
+
+load_3.Name = "load"
+load_3.Parent = Frame
+load_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+load_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+load_3.Position = UDim2.new(0, 0, 1, 0)
+load_3.Size = UDim2.new(0, 287, 0, 201)
+load_3.Visible = false
+
+ScrollingFrame.Parent = load_3
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0348432064, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0, 269, 0, 190)
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+close.Name = "close"
+close.Parent = ScrollingFrame
+close.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+close.BorderColor3 = Color3.fromRGB(255, 255, 255)
+close.Position = UDim2.new(0.0334572494, 0, 0, 0)
+close.Size = UDim2.new(0, 231, 0, 24)
+close.Font = Enum.Font.SourceSans
+close.Text = "CLOSE"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.TextXAlignment = Enum.TextXAlignment.Left
+
+GetToken.Name = "GetToken"
+GetToken.Parent = ScrollingFrame
+GetToken.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GetToken.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GetToken.Position = UDim2.new(0.0334572494, 0, 0, 0)
+GetToken.Size = UDim2.new(0, 231, 0, 24)
+GetToken.Font = Enum.Font.SourceSans
+GetToken.Text = "Get Token"
+GetToken.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetToken.TextScaled = true
+GetToken.TextSize = 14.000
+GetToken.TextWrapped = true
+GetToken.TextXAlignment = Enum.TextXAlignment.Left
+
+LoadToken.Name = "Load Token"
+LoadToken.Parent = ScrollingFrame
+LoadToken.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoadToken.BorderColor3 = Color3.fromRGB(255, 255, 255)
+LoadToken.Position = UDim2.new(0.0334572494, 0, 0, 0)
+LoadToken.Size = UDim2.new(0, 231, 0, 24)
+LoadToken.Font = Enum.Font.SourceSans
+LoadToken.Text = "Load Token"
+LoadToken.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadToken.TextScaled = true
+LoadToken.TextSize = 14.000
+LoadToken.TextWrapped = true
+LoadToken.TextXAlignment = Enum.TextXAlignment.Left
+
+destroyp.Name = "destroyp"
+destroyp.Parent = Frame
+destroyp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+destroyp.BackgroundTransparency = 1.000
+destroyp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+destroyp.BorderSizePixel = 0
+destroyp.Position = UDim2.new(0.912891984, 0, 0, 0)
+destroyp.Size = UDim2.new(0, 25, 0, 25)
+destroyp.Font = Enum.Font.FredokaOne
+destroyp.Text = "X"
+destroyp.TextColor3 = Color3.fromRGB(255, 0, 0)
+destroyp.TextScaled = true
+destroyp.TextSize = 14.000
+destroyp.TextWrapped = true
+
+minimize.Name = "minimize"
+minimize.Parent = Frame
+minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+minimize.BackgroundTransparency = 1.000
+minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.825783968, 0, 0, 0)
+minimize.Size = UDim2.new(0, 25, 0, 25)
+minimize.Font = Enum.Font.FredokaOne
+minimize.Text = "-"
+minimize.TextColor3 = Color3.fromRGB(255, 0, 0)
+minimize.TextScaled = true
+minimize.TextSize = 14.000
+minimize.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 200, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "BETTER COORDINATE GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+key.Name = "key"
+key.Parent = CoordGui
+key.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+key.BorderColor3 = Color3.fromRGB(0, 0, 0)
+key.BorderSizePixel = 0
+key.Position = UDim2.new(0.0623441413, 0, 0.110389613, 0)
+key.Size = UDim2.new(0, 345, 0, 213)
+
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Parent = key
+
+UICorner.Parent = key
+
+TextBox_3.Parent = key
+TextBox_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_3.BackgroundTransparency = 0.500
+TextBox_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_3.BorderSizePixel = 0
+TextBox_3.Position = UDim2.new(0.17971015, 0, 0.117370889, 0)
+TextBox_3.Size = UDim2.new(0, 221, 0, 50)
+TextBox_3.Font = Enum.Font.SourceSans
+TextBox_3.Text = ""
+TextBox_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_3.TextSize = 14.000
+
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Parent = TextBox_3
+
+UICorner_2.Parent = TextBox_3
+
+submit.Name = "submit"
+submit.Parent = key
+submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+submit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+submit.BorderSizePixel = 0
+submit.Position = UDim2.new(0.324637681, 0, 0.413145542, 0)
+submit.Size = UDim2.new(0, 120, 0, 36)
+submit.Font = Enum.Font.SourceSans
+submit.Text = "SUBMIT"
+submit.TextColor3 = Color3.fromRGB(0, 0, 0)
+submit.TextSize = 14.000
+
+UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_6.Parent = submit
+
+UICorner_3.Parent = submit
+
+ScrollingFrame_2.Parent = key
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.049275361, 0, 0.699530542, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 243, 0, 43)
+ScrollingFrame_2.CanvasSize = UDim2.new(0, 420, 0, 0)
+ScrollingFrame_2.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+ScrollingFrame_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+TextLabel_2.Parent = ScrollingFrame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0, 413, 0, 28)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "https://mckuadrat.github.io/GetKey/bettercoordinate.html"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Right
+
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_7.Parent = ScrollingFrame_2
+
+UICorner_4.Parent = ScrollingFrame_2
+
+copy_2.Name = "copy"
+copy_2.Parent = key
+copy_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+copy_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+copy_2.BorderSizePixel = 0
+copy_2.Position = UDim2.new(0.82028985, 0, 0.699530542, 0)
+copy_2.Size = UDim2.new(0, 43, 0, 43)
+copy_2.Font = Enum.Font.SourceSans
+copy_2.Text = "COPY"
+copy_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+copy_2.TextScaled = true
+copy_2.TextSize = 14.000
+copy_2.TextWrapped = true
+
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_8.Parent = copy_2
+
+UICorner_5.Parent = copy_2
+
+bypass.Name = "bypass"
+bypass.Parent = key
+bypass.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bypass.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bypass.BorderSizePixel = 0
+bypass.Position = UDim2.new(0.840579689, 0, 0.150234744, 0)
+bypass.Size = UDim2.new(0, 47, 0, 36)
+bypass.Font = Enum.Font.SourceSans
+bypass.Text = "BYPASS"
+bypass.TextColor3 = Color3.fromRGB(0, 0, 0)
+bypass.TextSize = 14.000
+
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_9.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_9.Parent = bypass
+
+UICorner_6.Parent = bypass
+
+-- Scripts:
+
+local function LQGNIP_fake_script() -- coord.LocalScript 
+	local script = Instance.new('LocalScript', coord)
+
+	local player = game.Players.LocalPlayer
+	local save = script.Parent.Parent.Parent.save
+	local load = script.Parent.Parent.Parent.load
+	local frame = load.Parent
+	local ch = player.Character
+	
+	local hrp = ch:WaitForChild("HumanoidRootPart", 10)
+	local alltokenn = Instance.new("StringValue")
+	alltokenn.Parent = script.Parent.Parent.Parent
+	local scrollingFrame = load.ScrollingFrame -- misalnya ini adalah ScrollingFrame
+	local listLayout = scrollingFrame:WaitForChild("UIListLayout")
+	local lastopen = Instance.new("StringValue")
+	lastopen.Parent = frame
+	lastopen.Name = "lastopen"
+	lastopen.Value = "base"
+	
+	listLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, listLayout.AbsoluteContentSize.Y + 8)
+	end)
+	
+	function getRandomLetter()
+		local asciiCode = math.random(65, 90) -- ASCII A = 65, Z = 90
+		return string.char(asciiCode)
+	end
+	
+	local function uc()
+		local x = math.floor(hrp.Position.X)
+		local y = math.floor(hrp.Position.Y)
+		local z = math.floor(hrp.Position.Z)
+	
+		return x,y,z
+	end
+	
+	frame.destroyp.MouseButton1Up:Connect(function()
+		frame.Parent:Destroy()
+	end)
+	
+	frame.minimize.MouseButton1Up:Connect(function()
+		if frame.minimize.Text == "-" then
+			frame.base.Visible = false
+			frame.load.Visible = false
+			frame.loade.Visible = false
+			frame.save.Visible = false
+			frame.minimize.Text = "+"
+		else
+			frame:FindFirstChild(lastopen.Value).Visible = true
+			frame.minimize.Text = "-"
+		end
+	end)
+	
+	save.cancel.MouseButton1Up:Connect(function()
+		save.Visible = false
+		script.Parent.Parent.Visible = true
+		lastopen.Value = "base"
+	end)
+	
+	script.Parent.Parent.copy.MouseButton1Up:Connect(function()
+		setclipboard(script.Parent.Text)
+	end)
+	
+	script.Parent.Parent.save.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.save.Visible = true
+		lastopen.Value = "save"
+	end)
+	
+	load.ScrollingFrame["Load Token"].MouseButton1Up:Connect(function()
+		load.Parent.loade.Visible = true
+		load.Visible = false
+		lastopen.Value = "loade"
+	end)
+	
+	script.Parent.Parent.load.MouseButton1Up:Connect(function()
+		for _, button in pairs(load.ScrollingFrame:GetChildren()) do
+			if button:IsA("TextButton") then
+				local token = button:FindFirstChild("token")
+				if token then
+					script.Parent.Parent.Visible = false
+					load.Visible = true
+					lastopen.Value = "load"
+				else
+					script.Parent.Parent.Visible = false
+					load.Parent.loade.Visible = true
+					lastopen.Value = "loade"
+				end
+			end
+		end
+	end)
+	
+	load.ScrollingFrame.GetToken.MouseButton1Up:Connect(function()
+		local allTokens = ""
+	
+		-- Memindai semua tombol di load.ScrollingFrame
+		for _, button in pairs(load.ScrollingFrame:GetChildren()) do
+			if button:IsA("TextButton") then
+				-- Mencari Token StringValue di tombol
+				local token = button:FindFirstChild("token")  -- Pastikan nama "Token" sesuai dengan yang digunakan di tombol
+	
+				if token and token:IsA("StringValue") then
+					-- Gabungkan Token.Value ke dalam string allTokens dengan pemisah koma
+					if allTokens ~= "" then
+						allTokens = allTokens .. ", "  -- Menambahkan koma dan spasi sebagai pemisah antar token
+					end
+					allTokens = allTokens .. token.Value
+				end
+			end
+		end
+	
+		-- Menampilkan atau menyalin token yang sudah digabungkan
+		if allTokens ~= "" then
+			print("All Tokens: " .. allTokens)
+			alltokenn.Value = allTokens  -- Menampilkan token yang sudah digabungkan
+			setclipboard(allTokens)     -- Menyalin semua token ke clipboard
+		else
+			print("No tokens found.")  -- Jika tidak ada token yang ditemukan
+		end
+	end)
+	
+	
+	load.ScrollingFrame.close.MouseButton1Up:Connect(function()
+		load.Visible = false
+		script.Parent.Parent.Visible = true
+		load.Parent.loade.Visible = false
+		lastopen.Value = "base"
+	end)
+	
+	load.Parent.loade.cancel.MouseButton1Up:Connect(function()
+		load.Parent.loade.Visible = false
+		script.Parent.Parent.Visible = true
+		lastopen.Value = "base"
+	end)
+	
+	save.save.MouseButton1Up:Connect(function()
+		local x,y,z = uc()
+		local button = Instance.new("TextButton")
+		button.Parent = load.ScrollingFrame
+		button.Name = save.TextBox.Text
+		button.Size = UDim2.new(0, 231, 0, 24)
+		button.BorderColor3 = Color3.new(1, 1, 1)
+		button.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+		button.TextColor3 = Color3.new(1, 1, 1)
+		button.Text = save.TextBox.Text
+		button.TextScaled = true
+		button.TextWrapped = true
+		button.TextXAlignment = Enum.TextXAlignment.Left
+		
+		local xx = Instance.new("IntValue")
+		xx.Parent = button
+		xx.Value = tonumber(x)
+		xx.Name = "x"
+		
+		local yy = Instance.new("IntValue")
+		yy.Parent = button
+		yy.Value = tonumber(y)
+		yy.Name = "y"
+		
+		local zz = Instance.new("IntValue")
+		zz.Parent = button
+		zz.Value = tonumber(z)
+		zz.Name = "z"
+		
+		local tl = getRandomLetter()
+		local tl2 = getRandomLetter()
+		local tl3 = getRandomLetter()
+		
+		local token = Instance.new("StringValue")
+		token.Name = "token"
+		token.Value = "{"..xx.Value..tl..yy.Value..tl2..zz.Value..tl3..button.Name:lower().."}"
+		token.Parent = button
+		
+		button.MouseButton1Up:Connect(function()
+			player.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(xx.Value, yy.Value, zz.Value)
+		end)
+		
+		save.Visible = false
+		save.Parent.base.Visible = true
+		lastopen.Value = "base"
+	end)
+	
+	load.Parent.loade.load.MouseButton1Up:Connect(function()
+		local get = load.Parent.loade.TextBox.Text
+		
+		function parseMultipleTokens(text)
+			local tokens = {}
+	
+			-- Loop untuk ambil semua token dalam {}
+			for tokenStr in text:gmatch("{(.-)}") do
+				local x, y, z, name = parseSingleToken(tokenStr)
+				table.insert(tokens, {
+					x = x,
+					y = y,
+					z = z,
+					name = name
+				})
+			end
+	
+			return tokens
+		end
+	
+		function parseSingleToken(token)
+			local parts = {}
+			local numberBuffer = ""
+			local count = 0
+			local i = 1
+	
+			while i <= #token and count < 3 do
+				local char = token:sub(i, i)
+	
+				if char:match("[A-Z]") then
+					if numberBuffer ~= "" then
+						table.insert(parts, tonumber(numberBuffer))
+						numberBuffer = ""
+						count += 1
+					end
+				else
+					numberBuffer = numberBuffer .. char
+				end
+	
+				i += 1
+			end
+	
+			local name = token:sub(i):lower() -- konversi nama ke huruf kecil
+	
+			local x, y, z = parts[1], parts[2], parts[3]
+			return x, y, z, name
+		end
+	
+		-- Contoh pemakaian
+		local inputText = get
+		local results = parseMultipleTokens(inputText)
+	
+		for i, token in ipairs(results) do
+			print("Token " .. i)
+			print("X:", token.x, "Y:", token.y, "Z:", token.z, "Name:", token.name)
+			local button = Instance.new("TextButton")
+			button.Parent = load.ScrollingFrame
+			button.Name = token.name
+			button.Size = UDim2.new(0, 231, 0, 24)
+			button.BorderColor3 = Color3.new(1, 1, 1)
+			button.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+			button.TextColor3 = Color3.new(1, 1, 1)
+			button.Text = token.name
+			button.TextScaled = true
+			button.TextWrapped = true
+			button.TextXAlignment = Enum.TextXAlignment.Left
+	
+			local xx = Instance.new("IntValue")
+			xx.Parent = button
+			xx.Value = tonumber(token.x)
+			xx.Name = "x"
+	
+			local yy = Instance.new("IntValue")
+			yy.Parent = button
+			yy.Value = tonumber(token.y)
+			yy.Name = "y"
+	
+			local zz = Instance.new("IntValue")
+			zz.Parent = button
+			zz.Value = tonumber(token.z)
+			zz.Name = "z"
+			
+			local tl = getRandomLetter()
+			local tl2 = getRandomLetter()
+			local tl3 = getRandomLetter()
+			
+			local token = Instance.new("StringValue")
+			token.Name = "token"
+			token.Value = "{"..xx.Value..tl..yy.Value..tl2..zz.Value..tl3..button.Name:lower().."}"
+			token.Parent = button
+			
+			load.Visible = true
+			load.Parent.loade.Visible = false
+			lastopen.Value = "load"
+			
+			button.MouseButton1Up:Connect(function()
+				player.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(xx.Value, yy.Value, zz.Value)
+			end)
+		end
+	end)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		local x,y,z = uc()
+		script.Parent.Text = x..", "..y..", "..z
+	end)
+end
+coroutine.wrap(LQGNIP_fake_script)()
+local function IFLPDJX_fake_script() -- key.LocalScript 
+	local script = Instance.new('LocalScript', key)
+
+	local key = script.Parent
+	
+	function reverseAlphabet(text)
+		-- Menghapus semua simbol dan karakter selain huruf
+		local cleanedText = text:gsub("[^a-zA-Z]", "") -- hanya huruf A-Z, a-z yang diambil
+	
+		-- Alfabet biasa dan terbalik
+		local alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+		local reversed = 'ZYXWVUTSRQPONMLKJIHGFEDCBA'
+	
+		-- Proses pembalikan alfabet
+		local result = ""
+		for i = 1, #cleanedText do
+			local char = cleanedText:sub(i, i) -- Ambil karakter per karakter
+			local isLower = char == char:lower() -- Cek apakah huruf kecil
+			local upperChar = char:upper() -- Ubah jadi huruf besar untuk pencarian
+	
+			-- Cek apakah karakter ada di dalam alfabet
+			local index = alphabet:find(upperChar)
+	
+			if index then
+				-- Ambil karakter terbalik
+				local newChar = reversed:sub(index, index)
+				-- Jika huruf asli kecil, jadikan kecil juga
+				result = result .. (isLower and newChar:lower() or newChar)
+			else
+				result = result .. char -- Karakter selain huruf tetap dipertahankan (misalnya angka)
+			end
+		end
+	
+		return result
+	end
+	
+	if game.Players.LocalPlayer.Name ~= "gwindoaslibeneran" then
+		key.bypass:Destroy()
+	end
+	
+	key.copy.MouseButton1Up:Connect(function()
+		setclipboard(key.ScrollingFrame.TextLabel.Text)
+	end)
+	
+	key.submit.MouseButton1Up:Connect(function()
+		local keycode = reverseAlphabet(game.Players.LocalPlayer.Name:lower())
+		local keycode2 = reverseAlphabet(game.Players.LocalPlayer.DisplayName:lower())
+		if keycode == key.TextBox.Text then
+			key.Parent.Frame.Visible = true
+			key:Destroy()
+		elseif keycode2 == key.TextBox.Text then
+			key.Parent.Frame.Visible = true
+			key:Destroy()
+		end
+		
+		print(keycode.." "..keycode2)
+	end)
+	
+	key.bypass.MouseButton1Up:Connect(function()
+		if game.Players.LocalPlayer.Name ~= "gwindoaslibeneran" then
+			key.bypass:Destroy()
+		else
+			key.Parent.Frame.Visible = true
+			key:Destroy()
+		end
+	end)
+end
+coroutine.wrap(IFLPDJX_fake_script)()
