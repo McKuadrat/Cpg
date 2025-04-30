@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.6
-
--- Instances:
-
 local CoordGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local base = Instance.new("Frame")
@@ -29,6 +24,7 @@ local GetToken = Instance.new("TextButton")
 local LoadToken = Instance.new("TextButton")
 local destroyp = Instance.new("TextButton")
 local minimize = Instance.new("TextButton")
+local drag = Instance.new("UIDragDetector")
 local TextLabel = Instance.new("TextLabel")
 local key = Instance.new("Frame")
 local UIStroke_4 = Instance.new("UIStroke")
@@ -64,6 +60,8 @@ Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Frame.Position = UDim2.new(0.0573566072, 0, 0.058441557, 0)
 Frame.Size = UDim2.new(0, 287, 0, 25)
 Frame.Visible = false
+
+drag.Parent = Frame
 
 base.Name = "base"
 base.Parent = Frame
