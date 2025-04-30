@@ -808,8 +808,6 @@ local function IFLPDJX_fake_script() -- key.LocalScript
 			key.Parent.Frame.Visible = true
 			key:Destroy()
 		end
-		
-		print(keycode.." "..keycode2)
 	end)
 	
 	key.bypass.MouseButton1Up:Connect(function()
