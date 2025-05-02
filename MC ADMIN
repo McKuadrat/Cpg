@@ -30,6 +30,16 @@ local TextLabel_13 = Instance.new("TextLabel")
 local TextLabel_14 = Instance.new("TextLabel")
 local TextLabel_15 = Instance.new("TextLabel")
 local TextLabel_16 = Instance.new("TextLabel")
+local TextLabel_17 = Instance.new("TextLabel")
+local TextLabel_18 = Instance.new("TextLabel")
+local TextLabel_19 = Instance.new("TextLabel")
+local TextLabel_20 = Instance.new("TextLabel")
+local TextLabel_21 = Instance.new("TextLabel")
+local TextLabel_22 = Instance.new("TextLabel")
+local TextLabel_23 = Instance.new("TextLabel")
+local ctool = Instance.new("TextLabel")
+local TextLabel_24 = Instance.new("TextLabel")
+local Sound = Instance.new("Sound")
 
 -- Properties:
 
@@ -42,7 +52,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BackgroundTransparency = 0.650
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.0436408967, 0, 0.0308441557, 0)
+Frame.Position = UDim2.new(0.021197008, 0, 0.012987013, 0)
 Frame.Size = UDim2.new(0, 255, 0, 195)
 
 UICorner.Parent = Frame
@@ -81,7 +91,8 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.105882354, 0, 0.405128211, 0)
 ScrollingFrame.Size = UDim2.new(0, 200, 0, 105)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 285)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 480)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
 ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 UIStroke_3.Color = Color3.fromRGB(255, 128, 0)
@@ -315,23 +326,163 @@ TextLabel_15.TextSize = 14.000
 TextLabel_15.TextWrapped = true
 TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_16.Parent = Frame
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.Parent = ScrollingFrame
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.BackgroundTransparency = 0.850
 TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_16.BorderSizePixel = 0
-TextLabel_16.Position = UDim2.new(0.105882354, 0, 0, 0)
-TextLabel_16.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_16.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_16.Size = UDim2.new(0, 188, 0, 22)
 TextLabel_16.Font = Enum.Font.SourceSans
-TextLabel_16.Text = "JUDUL"
+TextLabel_16.Text = "godmode"
 TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_16.TextScaled = true
 TextLabel_16.TextSize = 14.000
 TextLabel_16.TextWrapped = true
+TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_17.Parent = ScrollingFrame
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.BackgroundTransparency = 0.850
+TextLabel_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.BorderSizePixel = 0
+TextLabel_17.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_17.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = "view (Player ID Name)"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
+TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_18.Parent = ScrollingFrame
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.BackgroundTransparency = 0.850
+TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_18.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = "unview"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextWrapped = true
+TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_19.Parent = ScrollingFrame
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_19.BackgroundTransparency = 0.850
+TextLabel_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_19.BorderSizePixel = 0
+TextLabel_19.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_19.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_19.Font = Enum.Font.SourceSans
+TextLabel_19.Text = "disguise (Player ID Name)"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextScaled = true
+TextLabel_19.TextSize = 14.000
+TextLabel_19.TextWrapped = true
+TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_20.Parent = ScrollingFrame
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_20.BackgroundTransparency = 0.850
+TextLabel_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_20.BorderSizePixel = 0
+TextLabel_20.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_20.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_20.Font = Enum.Font.SourceSans
+TextLabel_20.Text = "forcefield / ff"
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextScaled = true
+TextLabel_20.TextSize = 14.000
+TextLabel_20.TextWrapped = true
+TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_21.Parent = ScrollingFrame
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_21.BackgroundTransparency = 0.850
+TextLabel_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_21.BorderSizePixel = 0
+TextLabel_21.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_21.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_21.Font = Enum.Font.SourceSans
+TextLabel_21.Text = "say (Text)"
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextScaled = true
+TextLabel_21.TextSize = 14.000
+TextLabel_21.TextWrapped = true
+TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_22.Parent = ScrollingFrame
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_22.BackgroundTransparency = 0.850
+TextLabel_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_22.BorderSizePixel = 0
+TextLabel_22.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_22.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_22.Font = Enum.Font.SourceSans
+TextLabel_22.Text = "tptool"
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.TextScaled = true
+TextLabel_22.TextSize = 14.000
+TextLabel_22.TextWrapped = true
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_23.Parent = ScrollingFrame
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_23.BackgroundTransparency = 0.850
+TextLabel_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_23.BorderSizePixel = 0
+TextLabel_23.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_23.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_23.Font = Enum.Font.SourceSans
+TextLabel_23.Text = "destroytool / dtool"
+TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.TextScaled = true
+TextLabel_23.TextSize = 14.000
+TextLabel_23.TextWrapped = true
+TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
+
+ctool.Name = "ctool"
+ctool.Parent = ScrollingFrame
+ctool.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ctool.BackgroundTransparency = 0.850
+ctool.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ctool.BorderSizePixel = 0
+ctool.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+ctool.Size = UDim2.new(0, 188, 0, 22)
+ctool.Font = Enum.Font.SourceSans
+ctool.Text = "copytool / copytools / ctool"
+ctool.TextColor3 = Color3.fromRGB(255, 255, 255)
+ctool.TextScaled = true
+ctool.TextSize = 14.000
+ctool.TextWrapped = true
+ctool.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_24.Parent = Frame
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.BackgroundTransparency = 1.000
+TextLabel_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_24.BorderSizePixel = 0
+TextLabel_24.Position = UDim2.new(0.105882354, 0, 0, 0)
+TextLabel_24.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_24.Font = Enum.Font.SourceSans
+TextLabel_24.Text = "JUDUL"
+TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.TextScaled = true
+TextLabel_24.TextSize = 14.000
+TextLabel_24.TextWrapped = true
+
+Sound.Parent = MCADMIN
+Sound.SoundId = "rbxassetid://12221984"
+Sound.RollOffMode = Enum.RollOffMode.InverseTapered
 
 -- Scripts:
 
-local function YXHZC_fake_script() -- MCADMIN.LocalScript 
+local function TEZXGBP_fake_script() -- MCADMIN.LocalScript 
 	local script = Instance.new('LocalScript', MCADMIN)
 
 	local Frame = script.Parent.Frame
@@ -378,6 +529,8 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 		Frame.TextLabel.Text = "MC ADMIN"
 	end
 	
+	Frame.TextLabel.Text = Frame.TextLabel.Text.." V1.0.0"
+	
 	local function tambahPerintah(perintah)
 		-- Cek apakah perintah sudah ada di dalam tabel
 		for i = 1, #last do
@@ -385,6 +538,7 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 				-- Jika sudah ada, pindahkan perintah ke depan (ke indeks pertama)
 				table.remove(last, i)
 				table.insert(last, 1, Frame.Box.Text)
+				Frame.Box.Text = ""
 				return
 			end
 		end
@@ -607,6 +761,7 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 				local ff = Instance.new("ForceField")
 				ff.Parent = player.Character
 			end
+			tambahPerintah()
 		elseif cmd == "view" and #args == 2 then
 			local target = game:GetService("Players"):FindFirstChild(args[2])
 			if target and target.Character and target.Character:FindFirstChild("Humanoid") then
@@ -615,8 +770,127 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 			else
 				warn("Player tidak ditemukan atau belum spawn.")
 			end
+			tambahPerintah()
 		elseif cmd == "unview" then
 			Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+		elseif cmd == "disguise" and #args == 2 then
+			local target = game:GetService("Players"):FindFirstChild(args[2])
+			if target and target.Character and player.Character then
+				local yourChar = player.Character
+				local theirChar = target.Character
+	
+				-- Copy appearance
+				for _, item in ipairs(yourChar:GetChildren()) do
+					if item:IsA("Accessory") or item:IsA("Shirt") or item:IsA("Pants") then
+						item:Destroy()
+					end
+				end
+	
+				for _, item in ipairs(theirChar:GetChildren()) do
+					if item:IsA("Accessory") or item:IsA("Shirt") or item:IsA("Pants") then
+						item:Clone().Parent = yourChar
+					end
+				end
+			end
+			tambahPerintah()
+		elseif cmd == "say" and #args >= 2 then
+			local text = table.concat(args, " ", 2)
+			local head = player.Character and player.Character:FindFirstChild("Head")
+	
+			if head then
+				local chatService = game:GetService("Chat")
+				chatService:Chat(head, text, Enum.ChatColor.White)
+			end
+		elseif cmd == "tptool" then
+			-- have fun skidding this @jakefromjakesfarm 
+			local mouse = player:GetMouse()
+	
+			local function isAlive(Player, headCheck)
+				local Player = Player or player
+				if Player and Player.Character and ((Player.Character:FindFirstChildOfClass("Humanoid")) and (Player.Character:FindFirstChild("HumanoidRootPart")) and (headCheck and Player.Character:FindFirstChild("Head") or not headCheck)) then
+					return true
+				else
+					return false
+				end
+			end
+	
+			local tool = Instance.new("Tool")
+			tool.Name = "MC TPTool"
+			tool.Parent = player.Backpack
+			tool.RequiresHandle = false
+			tool.TextureId = "rbxassetid://6723742952"
+			tool.Activated:Connect(function()
+				if isAlive() then
+					player.Character.HumanoidRootPart.CFrame = mouse.Hit + Vector3.new(0, 5, 0)
+				end
+			end)
+			tambahPerintah()
+		elseif cmd == "destroytool" or cmd == "dtool" then
+			local mouse = player:GetMouse()
+			
+			local function isAlive(Player, headCheck)
+				local Player = Player or player
+				if Player and Player.Character and ((Player.Character:FindFirstChildOfClass("Humanoid")) and (Player.Character:FindFirstChild("HumanoidRootPart")) and (headCheck and Player.Character:FindFirstChild("Head") or not headCheck)) then
+					return true
+				else
+					return false
+				end
+			end
+			
+			local tool = Instance.new("Tool")
+			tool.Name = "MC DTool"
+			tool.Parent = player.Backpack
+			tool.RequiresHandle = false
+			tool.Activated:Connect(function()
+				if isAlive() then
+					local target = mouse.Target
+					if target and target:IsA("BasePart") then
+						local explode = Instance.new("Explosion")
+						explode.Parent = target
+						target.Transparency = 1
+						target.CanCollide = false
+						explode.Position = target.Position
+						script.Parent.Sound:Play()
+						wait(1.5)
+						target:Destroy()
+					end
+				end
+			end)
+			tambahPerintah()
+		elseif cmd == "copytools" or cmd == "copytool" or cmd == "ctool" then
+			local mouse = player:GetMouse()
+			local tool = Instance.new("Tool")
+			local name = ""
+			tool.Parent = player.Backpack
+			tool.Name = "MC Copy Tools"
+			tool.RequiresHandle = false
+			tool.Activated:Connect(function()
+				local target = mouse.Target
+				if target and target:IsA("BasePart") then
+					if game.ReplicatedStorage:FindFirstChild(name) then
+						game.ReplicatedStorage:FindFirstChild(name):Destroy()
+					end
+					local clone = target:Clone()
+					clone:SetAttribute("IsCopied", true)
+	
+					-- Simpan di ServerStorage supaya aman
+					clone.Parent = game:GetService("ReplicatedStorage")
+					clone.Name = clone.Name.."mcclone"
+					name = clone.Name
+				end
+			end)
+			local tool = Instance.new("Tool")
+			tool.Parent = player.Backpack
+			tool.Name = "MC Paste Tools"
+			tool.RequiresHandle = false
+			tool.Activated:Connect(function()
+				local part = game.ReplicatedStorage:FindFirstChild(name):Clone()
+				if part then
+					part.Parent = game.Workspace
+					part.Position = mouse.Hit.Position
+				end
+			end)
+			tambahPerintah()
 		end
 	end)
 	
@@ -634,6 +908,15 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 			elseif baris > panjang then
 				baris = 1  -- Kembali ke perintah pertama jika sudah di akhir
 			end
+		elseif input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Down then
+			local panjang = #last
+			
+			if baris <= panjang and baris > 0 then
+				Frame.Box.Text = last[baris]  -- Tampilkan perintah pada baris yang sesuai
+				baris = baris - 1  -- Pindah ke perintah sebelumnya
+			elseif baris > panjang then
+				baris = #last  -- Kembali ke perintah pertama jika sudah di akhir
+			end
 		end
 	end)
 	
@@ -641,4 +924,4 @@ local function YXHZC_fake_script() -- MCADMIN.LocalScript
 	player.Character.Animate.dance.Animation2.AnimationId = "http://www.roblox.com/asset/?id=10714340543"
 	player.Character.Animate.dance.Animation3.AnimationId = "http://www.roblox.com/asset/?id=10714340543"
 end
-coroutine.wrap(YXHZC_fake_script)()
+coroutine.wrap(TEZXGBP_fake_script)()
