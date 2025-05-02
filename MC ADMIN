@@ -4,6 +4,7 @@
 -- Instances:
 
 local MCADMIN = Instance.new("ScreenGui")
+local drag = Instance.new("UiDragDetector")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
@@ -54,6 +55,8 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.021197008, 0, 0.012987013, 0)
 Frame.Size = UDim2.new(0, 255, 0, 195)
+
+drag.Parent = Frame
 
 UICorner.Parent = Frame
 
