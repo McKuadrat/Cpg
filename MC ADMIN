@@ -4,8 +4,8 @@
 -- Instances:
 
 local MCADMIN = Instance.new("ScreenGui")
-local drag = Instance.new("UiDragDetector")
 local Frame = Instance.new("Frame")
+local drag = Instance.new("UIDragDetector")
 local UICorner = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
 local Box = Instance.new("TextBox")
@@ -40,13 +40,23 @@ local TextLabel_22 = Instance.new("TextLabel")
 local TextLabel_23 = Instance.new("TextLabel")
 local ctool = Instance.new("TextLabel")
 local TextLabel_24 = Instance.new("TextLabel")
+local TextLabel_25 = Instance.new("TextLabel")
+local TextLabel_26 = Instance.new("TextLabel")
+local TextLabel_27 = Instance.new("TextLabel")
+local TextLabel_28 = Instance.new("TextLabel")
+local TextLabel_29 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
 local Sound = Instance.new("Sound")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
 
 -- Properties:
 
 MCADMIN.Name = "MC ADMIN"
 MCADMIN.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MCADMIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MCADMIN.ResetOnSpawn = false
 
 Frame.Parent = MCADMIN
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -94,8 +104,7 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.105882354, 0, 0.405128211, 0)
 ScrollingFrame.Size = UDim2.new(0, 200, 0, 105)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 480)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
 ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 UIStroke_3.Color = Color3.fromRGB(255, 128, 0)
@@ -465,27 +474,137 @@ ctool.TextSize = 14.000
 ctool.TextWrapped = true
 ctool.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_24.Parent = Frame
-TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_24.BackgroundTransparency = 1.000
+TextLabel_24.Parent = ScrollingFrame
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_24.BackgroundTransparency = 0.850
 TextLabel_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_24.BorderSizePixel = 0
-TextLabel_24.Position = UDim2.new(0.105882354, 0, 0, 0)
-TextLabel_24.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_24.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_24.Size = UDim2.new(0, 188, 0, 22)
 TextLabel_24.Font = Enum.Font.SourceSans
-TextLabel_24.Text = "JUDUL"
+TextLabel_24.Text = "coordinategu / cgui"
 TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_24.TextScaled = true
 TextLabel_24.TextSize = 14.000
 TextLabel_24.TextWrapped = true
+TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_25.Parent = ScrollingFrame
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_25.BackgroundTransparency = 0.850
+TextLabel_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_25.BorderSizePixel = 0
+TextLabel_25.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_25.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_25.Font = Enum.Font.SourceSans
+TextLabel_25.Text = "fire (Player ID Name / all)"
+TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.TextScaled = true
+TextLabel_25.TextSize = 14.000
+TextLabel_25.TextWrapped = true
+TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_26.Parent = ScrollingFrame
+TextLabel_26.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_26.BackgroundTransparency = 0.850
+TextLabel_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_26.BorderSizePixel = 0
+TextLabel_26.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_26.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_26.Font = Enum.Font.SourceSans
+TextLabel_26.Text = "unfire (Player ID Name / all)"
+TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.TextScaled = true
+TextLabel_26.TextSize = 14.000
+TextLabel_26.TextWrapped = true
+TextLabel_26.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_27.Parent = ScrollingFrame
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_27.BackgroundTransparency = 0.850
+TextLabel_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_27.BorderSizePixel = 0
+TextLabel_27.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_27.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_27.Font = Enum.Font.SourceSans
+TextLabel_27.Text = "sit"
+TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.TextScaled = true
+TextLabel_27.TextSize = 14.000
+TextLabel_27.TextWrapped = true
+TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_28.Parent = ScrollingFrame
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_28.BackgroundTransparency = 0.850
+TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_28.BorderSizePixel = 0
+TextLabel_28.Position = UDim2.new(0.0599999987, 0, 0.419047624, 0)
+TextLabel_28.Size = UDim2.new(0, 188, 0, 22)
+TextLabel_28.Font = Enum.Font.SourceSans
+TextLabel_28.Text = "destroygui / destroyg"
+TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.TextScaled = true
+TextLabel_28.TextSize = 14.000
+TextLabel_28.TextWrapped = true
+TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_29.Parent = Frame
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.BackgroundTransparency = 1.000
+TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_29.BorderSizePixel = 0
+TextLabel_29.Position = UDim2.new(0.105882354, 0, 0, 0)
+TextLabel_29.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_29.Font = Enum.Font.SourceSans
+TextLabel_29.Text = "JUDUL"
+TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.TextScaled = true
+TextLabel_29.TextSize = 14.000
+TextLabel_29.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.870588243, 0, 0.0153846154, 0)
+TextButton.Size = UDim2.new(0, 33, 0, 33)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
 Sound.Parent = MCADMIN
 Sound.SoundId = "rbxassetid://12221984"
 Sound.RollOffMode = Enum.RollOffMode.InverseTapered
 
+TextButton_2.Parent = MCADMIN
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BackgroundTransparency = 0.650
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.468827933, 0, 0.0714285746, 0)
+TextButton_2.Size = UDim2.new(0, 50, 0, 50)
+TextButton_2.Visible = false
+TextButton_2.Font = Enum.Font.FredokaOne
+TextButton_2.Text = "MA"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_4.Parent = TextButton_2
+
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(255, 128, 0)
+UIStroke_4.Parent = TextButton_2
+
 -- Scripts:
 
-local function TEZXGBP_fake_script() -- MCADMIN.LocalScript 
+local function NION_fake_script() -- MCADMIN.LocalScript 
 	local script = Instance.new('LocalScript', MCADMIN)
 
 	local Frame = script.Parent.Frame
@@ -632,57 +751,55 @@ local function TEZXGBP_fake_script() -- MCADMIN.LocalScript
 		elseif cmd == "ban" and #args == 2 then
 			local target = game.Workspace:FindFirstChild(args[2])
 			local pt = game.Players:FindFirstChild(args[2])
+			local humanoid = player.Character:FindFirstChild("Humanoid")
+			local targeth = target:FindFirstChild("Humanoid")
 			local ws = player.Character.Humanoid.WalkSpeed
-			if target ~= player.Name then
+			tambahPerintah()
+			if targeth and humanoid then
 				local anim = Instance.new("Animation")
 				anim.AnimationId = "http://www.roblox.com/asset/?id=10714347256"
 	
-				if target then
-					local humanoid = player.Character:FindFirstChild("Humanoid")
-					local targeth = target:FindFirstChild("Humanoid")
-					if humanoid and targeth then
-						-- Memuat animasi satu kali
-						local animTrack = humanoid:LoadAnimation(anim)
-						animTrack:Play()
-						player.Character.Humanoid.WalkSpeed = 0
-						wait(2)
-						local baneffect = Instance.new("Part")
-						baneffect.Shape = "Cylinder"
-						baneffect.Size = Vector3.new(159.279, 11.931, 30.782)
-						baneffect.Color = Color3.new(0.227451, 0.490196, 0.0823529)
-						baneffect.Transparency = 0.2
-						baneffect.CFrame = target:FindFirstChild("HumanoidRootPart").CFrame
-						baneffect.Anchored = true
-						baneffect.CanCollide = false
-						baneffect.Orientation = Vector3.new(0, 0, -90)
-						baneffect.Material = Enum.Material.Plastic
-						baneffect.Parent = target
-						wait(2)
-						target:Destroy()
-						pt:Destroy()
-						local sound = Instance.new("Sound")
-						sound.SoundId = "rbxassetid://2674547670"
-						sound.Parent = player
-						sound:Play()
-						-- Tunggu selama durasi animasi (misalnya 8 detik)
-						wait(3)
-						sound:Destroy()
-						animTrack:Stop()
-						player.Character.Humanoid.WalkSpeed = ws
-						tambahPerintah(Frame.Box.Text)
-					else
-						local animTrack = humanoid:LoadAnimation(anim)
-						animTrack:Play()
-						player.Character.Humanoid.WalkSpeed = 0
-						wait(7)
-						game.StarterGui:SetCore("SendNotification", {
-							Title = "MC ADMIN";
-							Text = "Failed To Ban!";
-							Duration = 5;
-						})
-						player.Character.Humanoid.WalkSpeed = ws
-						animTrack:Stop()
-					end
+				if args[2] ~= player.Name then
+					-- Memuat animasi satu kali
+					local animTrack = humanoid:LoadAnimation(anim)
+					animTrack:Play()
+					player.Character.Humanoid.WalkSpeed = 0
+					wait(2)
+					local baneffect = Instance.new("Part")
+					baneffect.Shape = "Cylinder"
+					baneffect.Size = Vector3.new(159.279, 11.931, 30.782)
+					baneffect.Color = Color3.new(0.227451, 0.490196, 0.0823529)
+					baneffect.Transparency = 0.2
+					baneffect.CFrame = target:FindFirstChild("HumanoidRootPart").CFrame
+					baneffect.Anchored = true
+					baneffect.CanCollide = false
+					baneffect.Orientation = Vector3.new(0, 0, -90)
+					baneffect.Material = Enum.Material.Plastic
+					baneffect.Parent = target
+					wait(2)
+					target:Destroy()
+					pt:Destroy()
+					local sound = Instance.new("Sound")
+					sound.SoundId = "rbxassetid://2674547670"
+					sound.Parent = player
+					sound:Play()
+					-- Tunggu selama durasi animasi (misalnya 8 detik)
+					wait(3)
+					sound:Destroy()
+					animTrack:Stop()
+					player.Character.Humanoid.WalkSpeed = ws
+				else
+					local animTrack = humanoid:LoadAnimation(anim)
+					animTrack:Play()
+					player.Character.Humanoid.WalkSpeed = 0
+					wait(7)
+					game.StarterGui:SetCore("SendNotification", {
+						Title = "MC ADMIN";
+						Text = "Failed To Ban!";
+						Duration = 5;
+					})
+					player.Character.Humanoid.WalkSpeed = ws
+					animTrack:Stop()
 				end
 			end
 		elseif cmd == "day" then
@@ -738,7 +855,7 @@ local function TEZXGBP_fake_script() -- MCADMIN.LocalScript
 			tambahPerintah()
 		elseif cmd == "f3x" then
 			tambahPerintah()
-			loadstring(game:HttpGet(('https://pastebin.com/raw/hp08JgV1'),true))()
+			loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
 		elseif cmd == "jump" and #args == 2 then
 			local value = tonumber(args[2])
 			
@@ -894,6 +1011,55 @@ local function TEZXGBP_fake_script() -- MCADMIN.LocalScript
 				end
 			end)
 			tambahPerintah()
+		elseif cmd == "coordinategui" or cmd == "cgui" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/McKuadrat/Cpg/refs/heads/main/BETTTER%20COORDINATE"))()
+			tambahPerintah()
+		elseif cmd == "fire" and #args == 2 then
+			local target = args[2]
+			local lower = target:lower()
+			if lower ~= "all" then
+				local plyr = game.Workspace:FindFirstChild(target)
+				if plyr then
+					local fire = Instance.new("Fire")
+					fire.Parent = plyr.Head
+					fire.Size = 15
+					fire.Heat = 9
+				end
+			else
+				for _, plyr in pairs(game:GetService("Players"):GetPlayers()) do
+					if plyr.Character and plyr.Character:FindFirstChild("Head") then
+						local fire = Instance.new("Fire")
+						fire.Parent = plyr.Character.Head
+						fire.Size = 15
+						fire.Heat = 9
+					end
+				end
+			end
+			tambahPerintah()
+		elseif cmd == "unfire" and #args == 2 then
+			local target = args[2]
+			local lower = target:lower()
+			
+			if lower ~= "all" then
+				local plyr = game.Workspace:FindFirstChild(target)
+				if plyr then
+					if plyr.Head:FindFirstChildWhichIsA("Fire") then
+						plyr.Head:FindFirstChildWhichIsA("Fire"):Destroy()
+					end
+				end
+			else
+				for _, plyr in pairs(game:GetService("Players"):GetPlayers()) do
+					if plyr.Character.Head:FindFirstChildWhichIsA("Fire") then
+						plyr.Character.Head:FindFirstChildWhichIsA("Fire"):Destroy()
+					end
+				end
+			end
+			tambahPerintah()
+		elseif cmd == "sit" then
+			player.Character.Humanoid.Sit = not player.Character.Humanoid.Sit
+			tambahPerintah()
+		elseif cmd == "destroygui" or cmd == "destroyg" then
+			script.Parent:Destroy()
 		end
 	end)
 	
@@ -926,5 +1092,15 @@ local function TEZXGBP_fake_script() -- MCADMIN.LocalScript
 	player.Character.Animate.dance.Animation1.AnimationId = "http://www.roblox.com/asset/?id=10714340543"
 	player.Character.Animate.dance.Animation2.AnimationId = "http://www.roblox.com/asset/?id=10714340543"
 	player.Character.Animate.dance.Animation3.AnimationId = "http://www.roblox.com/asset/?id=10714340543"
+	
+	script.Parent.TextButton.MouseButton1Up:Connect(function()
+		Frame.Visible = true
+		script.Parent.TextButton.Visible = false
+	end)
+	
+	Frame.TextButton.MouseButton1Up:Connect(function()
+		Frame.Visible = false
+		script.Parent.TextButton.Visible = true
+	end)
 end
-coroutine.wrap(TEZXGBP_fake_script)()
+coroutine.wrap(NION_fake_script)()
