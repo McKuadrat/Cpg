@@ -1,0 +1,510 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local Drone = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local up = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local left = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local down = Instance.new("ImageButton")
+local UICorner_3 = Instance.new("UICorner")
+local right = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local tp = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local light = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
+local fly = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local flyd = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+
+-- Properties:
+
+Drone.Name = "Drone"
+Drone.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Drone.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Drone.ResetOnSpawn = false
+
+Frame.Parent = Drone
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 100, 0, 100)
+Frame.Visible = false
+
+up.Name = "up"
+up.Parent = Frame
+up.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+up.BackgroundTransparency = 0.650
+up.BorderColor3 = Color3.fromRGB(0, 0, 0)
+up.BorderSizePixel = 0
+up.Position = UDim2.new(0.660000026, 0, 1.96000004, 0)
+up.Size = UDim2.new(0, 50, 0, 50)
+up.Image = "rbxassetid://18705278858"
+
+UICorner.Parent = up
+
+left.Name = "left"
+left.Parent = Frame
+left.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+left.BackgroundTransparency = 0.650
+left.BorderColor3 = Color3.fromRGB(0, 0, 0)
+left.BorderSizePixel = 0
+left.Position = UDim2.new(0.0799999982, 0, 2.51999998, 0)
+left.Rotation = -90.000
+left.Size = UDim2.new(0, 50, 0, 50)
+left.Image = "rbxassetid://18705278858"
+
+UICorner_2.Parent = left
+
+down.Name = "down"
+down.Parent = Frame
+down.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+down.BackgroundTransparency = 0.650
+down.BorderColor3 = Color3.fromRGB(0, 0, 0)
+down.BorderSizePixel = 0
+down.Position = UDim2.new(0.660000026, 0, 2.51999998, 0)
+down.Rotation = 180.000
+down.Size = UDim2.new(0, 50, 0, 50)
+down.Image = "rbxassetid://18705278858"
+
+UICorner_3.Parent = down
+
+right.Name = "right"
+right.Parent = Frame
+right.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+right.BackgroundTransparency = 0.650
+right.BorderColor3 = Color3.fromRGB(0, 0, 0)
+right.BorderSizePixel = 0
+right.Position = UDim2.new(1.25, 0, 2.51999998, 0)
+right.Rotation = 90.000
+right.Size = UDim2.new(0, 50, 0, 50)
+right.Image = "rbxassetid://18705278858"
+
+UICorner_4.Parent = right
+
+tp.Name = "tp"
+tp.Parent = Frame
+tp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+tp.BackgroundTransparency = 0.650
+tp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tp.BorderSizePixel = 0
+tp.Position = UDim2.new(0.0799999982, 0, 1.96000004, 0)
+tp.Size = UDim2.new(0, 50, 0, 50)
+tp.Image = "rbxassetid://12941020168"
+
+UICorner_5.Parent = tp
+
+light.Name = "light"
+light.Parent = Frame
+light.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+light.BackgroundTransparency = 0.650
+light.BorderColor3 = Color3.fromRGB(0, 0, 0)
+light.BorderSizePixel = 0
+light.Position = UDim2.new(1.25, 0, 1.96000004, 0)
+light.Size = UDim2.new(0, 50, 0, 50)
+light.Image = "rbxassetid://74888619733969"
+light.ImageColor3 = Color3.fromRGB(162, 162, 162)
+
+UICorner_6.Parent = light
+
+fly.Name = "fly"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+fly.BackgroundTransparency = 0.650
+fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fly.BorderSizePixel = 0
+fly.Position = UDim2.new(1.87, 0, 1.75, 0)
+fly.Size = UDim2.new(0, 50, 0, 50)
+fly.Image = "rbxassetid://18705278858"
+fly.ImageColor3 = Color3.fromRGB(0, 255, 183)
+
+UICorner_7.Parent = fly
+
+flyd.Name = "flyd"
+flyd.Parent = Frame
+flyd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+flyd.BackgroundTransparency = 0.650
+flyd.BorderColor3 = Color3.fromRGB(0, 0, 0)
+flyd.BorderSizePixel = 0
+flyd.Position = UDim2.new(1.87, 0, 2.82999992, 0)
+flyd.Rotation = 180.000
+flyd.Size = UDim2.new(0, 50, 0, 50)
+flyd.Image = "rbxassetid://18705278858"
+flyd.ImageColor3 = Color3.fromRGB(0, 255, 183)
+
+UICorner_8.Parent = flyd
+
+ImageButton.Parent = Drone
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 0.650
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.468827933, 0, 0, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Image = "rbxassetid://13587354126"
+
+UICorner_9.Parent = ImageButton
+
+-- Scripts:
+
+local function EXOBFF_fake_script() -- Drone.LocalScript 
+	local script = Instance.new('LocalScript', Drone)
+
+	local base = script.Parent.Frame
+	local player = game.Players.LocalPlayer
+	local char = player.Character
+	local UIS = game:GetService("UserInputService")
+	wait(0.5)
+	local head = char:FindFirstChild("Head"):Clone()
+	head.Parent = game.ReplicatedStorage
+	head.Name = player.Name.."head"
+	local isHolding1 = false
+	local isHolding2 = false
+	local ohh = false
+	local ffh = false
+	local obj = player.Name.."head"
+	local Camera = workspace.CurrentCamera
+	local RunService = game:GetService("RunService")
+	local ws = char.Humanoid.WalkSpeed
+	local light = false
+	local ls = "last "..player.Name
+	local fu = false
+	local fd = false
+	
+	local plate = Instance.new("Part")
+	plate.Parent = game.Workspace
+	plate.Position = Vector3.new(0, 600, 0)
+	plate.Name = "MCK Stalk Plate"
+	plate.Anchored = true
+	
+	local function convert(r, g, b)
+		return Color3.new(r/255, g/255, b/255)
+	end
+	
+	local function onHold1()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+		car.CFrame = CFrame.new(car.Position) * CFrame.Angles(0, math.rad(180), 0)
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not isHolding1 or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(0, 0, 5 * dt * 10) -- Multiplied to simulate speed
+		end)
+	end
+	
+	local function onHold2()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+		car.CFrame = CFrame.new(car.Position) * CFrame.Angles(0, math.rad(0), 0)
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not isHolding2 or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(0, 0, -5 * dt * 10) -- Multiplied to simulate speed
+		end)
+	end
+	
+	local function oh()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+		car.CFrame = CFrame.new(car.Position) * CFrame.Angles(0, math.rad(-90), 0)
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not ohh or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(5 * dt * 10, 0, 0) -- Multiplied to simulate speed
+		end)
+	end
+	
+	local function fh()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+		car.CFrame = CFrame.new(car.Position) * CFrame.Angles(0, math.rad(90), 0)
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not ffh or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(-5 * dt * 10, 0, 0) -- Multiplied to simulate speed
+		end)
+	end
+	
+	local function flyup()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not fu or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(0, 5 * dt * 10, 0) -- Multiplied to simulate speed
+		end)
+	end
+	
+	local function flydown()
+		local car = game.Workspace:FindFirstChild(obj)
+		if not car then return end
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not fd or not car or not car.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			car.Position = car.Position + Vector3.new(0, -5 * dt * 10, 0) -- Multiplied to simulate speed
+		end)
+	end
+	
+	base.up.MouseButton1Down:Connect(function()
+		isHolding1 = true
+		onHold1()
+	end)
+	
+	base.up.MouseButton1Up:Connect(function()
+		isHolding1 = false
+	end)
+	
+	base.down.MouseButton1Down:Connect(function()
+		isHolding2 = true
+		onHold2()
+	end)
+	
+	base.down.MouseButton1Up:Connect(function()
+		isHolding2 = false
+	end)
+	
+	base.left.MouseButton1Down:Connect(function()
+		ohh = true
+		oh()
+	end)
+	
+	base.left.MouseButton1Up:Connect(function()
+		ohh = false
+	end)
+	
+	base.right.MouseButton1Down:Connect(function()
+		ffh = true
+		fh()
+	end)
+	
+	base.right.MouseButton1Up:Connect(function()
+		ffh = false
+	end)
+	
+	base.fly.MouseButton1Down:Connect(function()
+		fu = true
+		flyup()
+	end)
+	
+	base.fly.MouseButton1Up:Connect(function()
+		fu = false
+	end)
+	
+	base.flyd.MouseButton1Down:Connect(function()
+		fd = true
+		flydown()
+	end)
+	
+	base.flyd.MouseButton1Up:Connect(function()
+		fd = false
+	end)
+	
+	UIS.InputBegan:Connect(function(a, b)
+		if b then return end
+		
+		if a.KeyCode == Enum.KeyCode.W then
+			isHolding1 = true
+			onHold1()
+		elseif a.KeyCode == Enum.KeyCode.S then
+			isHolding2 = true
+			onHold2()
+		elseif a.KeyCode == Enum.KeyCode.A then
+			ohh = true
+			oh()
+		elseif a.KeyCode == Enum.KeyCode.D then
+			ffh = true
+			fh()
+		elseif a.KeyCode == Enum.KeyCode.Q then
+			fu = true
+			flyup()
+		elseif a.KeyCode == Enum.KeyCode.E then
+			fd = true
+			flydown()
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(a, b)
+		if b then return end
+	
+		if a.KeyCode == Enum.KeyCode.W then
+			isHolding1 = false
+		elseif a.KeyCode == Enum.KeyCode.S then
+			isHolding2 = false
+		elseif a.KeyCode == Enum.KeyCode.A then
+			ohh = false
+		elseif a.KeyCode == Enum.KeyCode.D then
+			ffh = false
+		elseif a.KeyCode == Enum.KeyCode.Q then
+			fu = false
+		elseif a.KeyCode == Enum.KeyCode.E then
+			fd = false
+		end
+	end)
+	
+	
+	script.Parent.ImageButton.MouseButton1Up:Connect(function()
+		if not game.Workspace:FindFirstChild(obj) then
+			local clone = game.ReplicatedStorage:FindFirstChild(obj):Clone()
+			clone.Parent = game.Workspace
+			clone.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
+			clone.Anchored = true
+			
+			local part = Instance.new("Part")
+			part.Parent = game.Workspace
+			part.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
+			part.Transparency = 1
+			part.CanCollide = false
+			part.Anchored = true
+			part.Name = ls
+	
+			for _, neck in pairs(clone:GetChildren()) do
+				if neck:IsA("Motor6D") then
+					neck:Destroy()
+				end
+			end
+			
+			base.Visible = not base.Visible
+			clone.Orientation = Vector3.new(-1.448, 165.971, -1.369)
+			local target = game.Workspace:FindFirstChild(obj)
+			if target then
+				Camera.CameraSubject = target
+			else
+				warn("Objek tidak ditemukan atau belum spawn.")
+			end
+			
+			ws = char.Humanoid.WalkSpeed
+			
+			char.Humanoid.WalkSpeed = 0
+			char:SetPrimaryPartCFrame(CFrame.new(plate.Position + Vector3.new(0, 7, 0)))
+			
+			if light == true then
+				local lightt = Instance.new("PointLight")
+				lightt.Parent = target
+				lightt.Brightness = 2
+				lightt.Range = 11
+	
+				base.light.ImageColor3 = convert(255, 247, 0)
+			end
+		else
+			local find = game.Workspace:FindFirstChild(obj)
+			find:Destroy()
+			base.Visible = not base.Visible
+			local target = game.Workspace:FindFirstChild(ls)
+			if target then
+				char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+				char.Humanoid.WalkSpeed = ws
+			end
+			target:Destroy()
+			Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+		end
+	end)
+	
+	base.tp.MouseButton1Up:Connect(function()
+		if char.PrimaryPart == nil then
+			char.PrimaryPart = char:FindFirstChild("HumanoidRootPart")
+		end
+	
+		local target = game.Workspace:FindFirstChild(obj)
+		if target then
+			char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+			char.Humanoid.WalkSpeed = ws
+		end
+		Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+		local find = game.Workspace:FindFirstChild(obj)
+		local lss = game.Workspace:FindFirstChild(ls)
+		lss:Destroy()
+		find:Destroy()
+		base.Visible = not base.Visible
+	end)
+	
+	base.light.MouseButton1Up:Connect(function()
+		if light == false then
+			local target = game.Workspace:FindFirstChild(obj)
+			local lightt = Instance.new("PointLight")
+			lightt.Parent = target
+			lightt.Brightness = 2
+			lightt.Range = 11
+			light = true
+			
+			base.light.ImageColor3 = convert(255, 247, 0)
+		else
+			local target = game.Workspace:FindFirstChild(obj)
+			for _, lightt in pairs(target:GetChildren()) do
+				if lightt:IsA("PointLight") then
+					lightt:Destroy()
+				end
+			end
+			base.light.ImageColor3 = convert(162, 162, 162)
+			
+			light = false
+		end
+	end)
+	
+	-- Mengirim notification ke pemain
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Credits",  -- Judul Notification
+		Text = "Drone GUI Made By MC Kuadrat",  -- Isi Pesan
+		Icon = "rbxassetid://18339405719",  -- (Opsional) ID asset gambar ikon (pakai ID gambar Roblox)
+		Duration = 5  -- Durasi (dalam detik) berapa lama notification tampil
+	})
+	
+	char.Humanoid.Died:Connect(function()
+		-- Hapus objek yang ada di workspace
+		local find = game.Workspace:FindFirstChild(obj)
+		if find then
+			find:Destroy()
+		end
+	
+		-- Sembunyikan UI
+		base.Visible = false
+	
+		-- Hapus objek target
+		local target = game.Workspace:FindFirstChild(ls)
+		if target then
+			target:Destroy()
+		end
+	
+		-- Cek apakah karakter respawned, dan pastikan PrimaryPart diatur dengan benar
+		char = player.CharacterAdded:Wait()  -- Tunggu karakter baru
+		char:WaitForChild("HumanoidRootPart")  -- Pastikan HumanoidRootPart ada  -- Teleport karakter ke posisi yang diinginkan
+	end)
+	
+end
+coroutine.wrap(EXOBFF_fake_script)()
