@@ -37,6 +37,7 @@ Drone.Name = "Drone"
 Drone.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Drone.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Drone.ResetOnSpawn = false
+Drone.IgnoreGuiInset = true
 
 Frame.Parent = Drone
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
