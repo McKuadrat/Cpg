@@ -21,8 +21,15 @@ local fly = Instance.new("ImageButton")
 local UICorner_7 = Instance.new("UICorner")
 local flyd = Instance.new("ImageButton")
 local UICorner_8 = Instance.new("UICorner")
-local ImageButton = Instance.new("ImageButton")
+local speed = Instance.new("TextBox")
 local UICorner_9 = Instance.new("UICorner")
+local restart = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_11 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local close = Instance.new("ImageButton")
+local UICorner_12 = Instance.new("UICorner")
 
 -- Properties:
 
@@ -121,7 +128,7 @@ fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 fly.BackgroundTransparency = 0.650
 fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
 fly.BorderSizePixel = 0
-fly.Position = UDim2.new(1.87, 0, 1.75, 0)
+fly.Position = UDim2.new(1.87, 0, 1.80999994, 0)
 fly.Size = UDim2.new(0, 50, 0, 50)
 fly.Image = "rbxassetid://18705278858"
 fly.ImageColor3 = Color3.fromRGB(0, 255, 183)
@@ -134,13 +141,46 @@ flyd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 flyd.BackgroundTransparency = 0.650
 flyd.BorderColor3 = Color3.fromRGB(0, 0, 0)
 flyd.BorderSizePixel = 0
-flyd.Position = UDim2.new(1.87, 0, 2.82999992, 0)
+flyd.Position = UDim2.new(1.87, 0, 3, 0)
 flyd.Rotation = 180.000
 flyd.Size = UDim2.new(0, 50, 0, 50)
 flyd.Image = "rbxassetid://18705278858"
 flyd.ImageColor3 = Color3.fromRGB(0, 255, 183)
 
 UICorner_8.Parent = flyd
+
+speed.Name = "speed"
+speed.Parent = Frame
+speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+speed.BackgroundTransparency = 0.650
+speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+speed.BorderSizePixel = 0
+speed.Position = UDim2.new(0.0799999982, 0, 3.11999989, 0)
+speed.Size = UDim2.new(0, 167, 0, 38)
+speed.ClearTextOnFocus = false
+speed.Font = Enum.Font.Arcade
+speed.PlaceholderText = "5"
+speed.Text = "5"
+speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+UICorner_9.Parent = speed
+
+restart.Name = "restart"
+restart.Parent = Frame
+restart.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+restart.BackgroundTransparency = 0.650
+restart.BorderColor3 = Color3.fromRGB(0, 0, 0)
+restart.BorderSizePixel = 0
+restart.Position = UDim2.new(1.87, 0, 2.3900001, 0)
+restart.Rotation = 180.000
+restart.Size = UDim2.new(0, 50, 0, 50)
+restart.Image = "rbxassetid://69395121"
+restart.ImageColor3 = Color3.fromRGB(209, 0, 0)
+
+UICorner_10.Parent = restart
 
 ImageButton.Parent = Drone
 ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -151,11 +191,32 @@ ImageButton.Position = UDim2.new(0.468827933, 0, 0, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Image = "rbxassetid://13587354126"
 
-UICorner_9.Parent = ImageButton
+UICorner_11.Parent = ImageButton
+
+ImageLabel.Parent = Drone
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel.Visible = false
+ImageLabel.Image = "rbxassetid://83976228760451"
+
+close.Name = "close"
+close.Parent = Drone
+close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+close.BackgroundTransparency = 0.650
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.391521186, 0, 0, 0)
+close.Size = UDim2.new(0, 50, 0, 50)
+close.Image = "rbxassetid://121960953523495"
+
+UICorner_12.Parent = close
 
 -- Scripts:
 
-local function EXOBFF_fake_script() -- Drone.LocalScript 
+local function LGGBMD_fake_script() -- Drone.LocalScript 
 	local script = Instance.new('LocalScript', Drone)
 
 	local base = script.Parent.Frame
@@ -178,6 +239,15 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 	local ls = "last "..player.Name
 	local fu = false
 	local fd = false
+	local sneg = tonumber(base.speed.Text) * -1
+	local TweenService = game:GetService("TweenService")
+	local tunggu = Instance.new("IntValue")
+	tunggu.Name = "tunggu"
+	tunggu.Parent = script.Parent
+	tunggu.Value = 0
+	local yesr = Instance.new("IntValue")
+	yesr.Name = "yesr"
+	yesr.Parent = script.Parent
 	
 	local plate = Instance.new("Part")
 	plate.Parent = game.Workspace
@@ -185,14 +255,61 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 	plate.Name = "MCK Stalk Plate"
 	plate.Anchored = true
 	
+	base.speed.FocusLost:Connect(function()
+		if tonumber(base.speed.Text) > 0 then
+			sneg = tonumber(base.speed.Text) * -1
+		else
+			base.speed.Text = "0"
+		end
+	end)
+	
 	local function convert(r, g, b)
 		return Color3.new(r/255, g/255, b/255)
+	end
+	
+	local function startCountdown()
+		while tunggu.Value > 0 do
+			wait(1)
+			tunggu.Value = tunggu.Value - 1
+		end
+		yesr.Value = 0 -- Setel setelah selesai countdown
+	end
+	
+	yesr:GetPropertyChangedSignal("Value"):Connect(function()
+		if yesr.Value == 1 then
+			tunggu.Value = 3
+			startCountdown()
+		end
+	end)
+	
+	
+	local defaultFOV = 70
+	local zoomedOutFOV = 100
+	local tweenTime = 0.3 -- durasi transisi zoom
+	
+	-- Fungsi buat tween FOV
+	local function tweenFOV(targetFOV)
+		if game.Workspace:FindFirstChild(obj) then
+			local tweenInfo = TweenInfo.new(tweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+			local goal = { FieldOfView = targetFOV }
+			local tween = TweenService:Create(Camera, tweenInfo, goal)
+			tween:Play()
+	
+			if targetFOV == 100 then
+				script.Parent.ImageLabel.Visible = true
+			else
+				script.Parent.ImageLabel.Visible = false
+			end
+		end
 	end
 	
 	local function onHold1()
 		local car = game.Workspace:FindFirstChild(obj)
 		if not car then return end
 		car.CFrame = CFrame.new(car.Position) * CFrame.Angles(0, math.rad(180), 0)
+		local car = workspace:FindFirstChild(obj)
+		if not car then return end
+	
 		local connection
 		connection = RunService.RenderStepped:Connect(function(dt)
 			if not isHolding1 or not car or not car.Parent then
@@ -200,7 +317,19 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 				return
 			end
 	
-			car.Position = car.Position + Vector3.new(0, 0, 5 * dt * 10) -- Multiplied to simulate speed
+			-- Arah depan dari kamera
+			local forward = Camera.CFrame.LookVector
+			forward = Vector3.new(forward.X, 0, forward.Z).Unit
+	
+			local moveVector = forward * (tonumber(base.speed.Text) * dt * 10)
+			local newPosition = car.Position + moveVector
+	
+			-- Buat rotasi mobil menghadap ke arah gerak
+			if moveVector.Magnitude > 0.001 then
+				car.CFrame = CFrame.new(newPosition, newPosition + forward)
+			else
+				car.Position = newPosition
+			end
 		end)
 	end
 	
@@ -216,7 +345,19 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 				return
 			end
 	
-			car.Position = car.Position + Vector3.new(0, 0, -5 * dt * 10) -- Multiplied to simulate speed
+			-- Arah depan dari kamera
+			local forward = Camera.CFrame.LookVector
+			forward = Vector3.new(forward.X, 0, forward.Z).Unit
+	
+			local moveVector = forward * (sneg * dt * 10)
+			local newPosition = car.Position + moveVector
+	
+			-- Buat rotasi mobil menghadap ke arah gerak
+			if moveVector.Magnitude > 0.001 then
+				car.CFrame = CFrame.new(newPosition, newPosition + forward)
+			else
+				car.Position = newPosition
+			end
 		end)
 	end
 	
@@ -232,7 +373,11 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 				return
 			end
 	
-			car.Position = car.Position + Vector3.new(5 * dt * 10, 0, 0) -- Multiplied to simulate speed
+			local right = Camera.CFrame.RightVector
+			right = Vector3.new(right.X, 0, right.Z).Unit
+	
+			local speed = tonumber(base.speed.Text) or 0
+			car.Position = car.Position + right * (sneg * dt * 10)
 		end)
 	end
 	
@@ -248,7 +393,12 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 				return
 			end
 	
-			car.Position = car.Position + Vector3.new(-5 * dt * 10, 0, 0) -- Multiplied to simulate speed
+			-- Ambil arah kanan (RightVector) dari kamera
+			local right = Camera.CFrame.RightVector
+			right = Vector3.new(right.X, 0, right.Z).Unit -- Flatten ke permukaan, hilangkan Y biar gak naik-turun
+	
+			-- Gerakkan mobil relatif ke arah kamera kanan
+			car.Position = car.Position + right * (tonumber(base.speed.Text) * dt * 10)
 		end)
 	end
 	
@@ -285,55 +435,67 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 	base.up.MouseButton1Down:Connect(function()
 		isHolding1 = true
 		onHold1()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.up.MouseButton1Up:Connect(function()
 		isHolding1 = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	base.down.MouseButton1Down:Connect(function()
 		isHolding2 = true
 		onHold2()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.down.MouseButton1Up:Connect(function()
 		isHolding2 = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	base.left.MouseButton1Down:Connect(function()
 		ohh = true
 		oh()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.left.MouseButton1Up:Connect(function()
 		ohh = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	base.right.MouseButton1Down:Connect(function()
 		ffh = true
 		fh()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.right.MouseButton1Up:Connect(function()
 		ffh = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	base.fly.MouseButton1Down:Connect(function()
 		fu = true
 		flyup()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.fly.MouseButton1Up:Connect(function()
 		fu = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	base.flyd.MouseButton1Down:Connect(function()
 		fd = true
 		flydown()
+		tweenFOV(zoomedOutFOV)
 	end)
 	
 	base.flyd.MouseButton1Up:Connect(function()
 		fd = false
+		tweenFOV(defaultFOV)
 	end)
 	
 	UIS.InputBegan:Connect(function(a, b)
@@ -342,21 +504,99 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 		if a.KeyCode == Enum.KeyCode.W then
 			isHolding1 = true
 			onHold1()
+			tweenFOV(zoomedOutFOV)
 		elseif a.KeyCode == Enum.KeyCode.S then
 			isHolding2 = true
 			onHold2()
+			tweenFOV(zoomedOutFOV)
 		elseif a.KeyCode == Enum.KeyCode.A then
 			ohh = true
 			oh()
+			tweenFOV(zoomedOutFOV)
 		elseif a.KeyCode == Enum.KeyCode.D then
 			ffh = true
 			fh()
+			tweenFOV(zoomedOutFOV)
 		elseif a.KeyCode == Enum.KeyCode.Q then
 			fu = true
 			flyup()
+			tweenFOV(zoomedOutFOV)
 		elseif a.KeyCode == Enum.KeyCode.E then
 			fd = true
 			flydown()
+			tweenFOV(zoomedOutFOV)
+		elseif a.KeyCode == Enum.KeyCode.Home then
+			if not game.Workspace:FindFirstChild(obj) then
+				local clone = game.ReplicatedStorage:FindFirstChild(obj):Clone()
+				clone.Parent = game.Workspace
+				clone.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
+				clone.Anchored = true
+	
+				local part = Instance.new("Part")
+				part.Parent = game.Workspace
+				part.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
+				part.Transparency = 1
+				part.CanCollide = false
+				part.Anchored = true
+				part.Size = Vector3.new(10.93, 1, 10.92)
+				part.Name = ls
+	
+				for _, neck in pairs(clone:GetChildren()) do
+					if neck:IsA("Motor6D") then
+						neck:Destroy()
+					end
+				end
+	
+				base.Visible = not base.Visible
+				clone.Orientation = Vector3.new(-1.448, 165.971, -1.369)
+				local target = game.Workspace:FindFirstChild(obj)
+				if target then
+					Camera.CameraSubject = target
+				else
+					warn("Objek tidak ditemukan atau belum spawn.")
+				end
+	
+				ws = char.Humanoid.WalkSpeed
+	
+				char.Humanoid.WalkSpeed = 0
+				char:SetPrimaryPartCFrame(CFrame.new(plate.Position + Vector3.new(0, 7, 0)))
+	
+				if light == true then
+					local lightt = Instance.new("PointLight")
+					lightt.Parent = target
+					lightt.Brightness = 2
+					lightt.Range = 11
+	
+					base.light.ImageColor3 = convert(255, 247, 0)
+				end
+			else
+				local find = game.Workspace:FindFirstChild(obj)
+				find:Destroy()
+				base.Visible = not base.Visible
+				local target = game.Workspace:FindFirstChild(ls)
+				if target then
+					char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+					char.Humanoid.WalkSpeed = ws
+				end
+				target:Destroy()
+				Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+			end
+		elseif a.KeyCode == Enum.KeyCode.End then
+			if char.PrimaryPart == nil then
+				char.PrimaryPart = char:FindFirstChild("HumanoidRootPart")
+			end
+	
+			local target = game.Workspace:FindFirstChild(obj)
+			if target then
+				char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+				char.Humanoid.WalkSpeed = ws
+			end
+			Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+			local find = game.Workspace:FindFirstChild(obj)
+			local lss = game.Workspace:FindFirstChild(ls)
+			lss:Destroy()
+			find:Destroy()
+			base.Visible = not base.Visible
 		end
 	end)
 	
@@ -365,16 +605,22 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 	
 		if a.KeyCode == Enum.KeyCode.W then
 			isHolding1 = false
+			tweenFOV(defaultFOV)
 		elseif a.KeyCode == Enum.KeyCode.S then
 			isHolding2 = false
+			tweenFOV(defaultFOV)
 		elseif a.KeyCode == Enum.KeyCode.A then
 			ohh = false
+			tweenFOV(defaultFOV)
 		elseif a.KeyCode == Enum.KeyCode.D then
 			ffh = false
+			tweenFOV(defaultFOV)
 		elseif a.KeyCode == Enum.KeyCode.Q then
 			fu = false
+			tweenFOV(defaultFOV)
 		elseif a.KeyCode == Enum.KeyCode.E then
 			fd = false
+			tweenFOV(defaultFOV)
 		end
 	end)
 	
@@ -385,13 +631,14 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 			clone.Parent = game.Workspace
 			clone.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
 			clone.Anchored = true
-			
+	
 			local part = Instance.new("Part")
 			part.Parent = game.Workspace
 			part.Position = player.Character:FindFirstChild("HumanoidRootPart").Position
 			part.Transparency = 1
 			part.CanCollide = false
 			part.Anchored = true
+			part.Size = Vector3.new(10.93, 1, 10.92)
 			part.Name = ls
 	
 			for _, neck in pairs(clone:GetChildren()) do
@@ -399,7 +646,7 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 					neck:Destroy()
 				end
 			end
-			
+	
 			base.Visible = not base.Visible
 			clone.Orientation = Vector3.new(-1.448, 165.971, -1.369)
 			local target = game.Workspace:FindFirstChild(obj)
@@ -408,12 +655,12 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 			else
 				warn("Objek tidak ditemukan atau belum spawn.")
 			end
-			
+	
 			ws = char.Humanoid.WalkSpeed
-			
+	
 			char.Humanoid.WalkSpeed = 0
 			char:SetPrimaryPartCFrame(CFrame.new(plate.Position + Vector3.new(0, 7, 0)))
-			
+	
 			if light == true then
 				local lightt = Instance.new("PointLight")
 				lightt.Parent = target
@@ -500,11 +747,77 @@ local function EXOBFF_fake_script() -- Drone.LocalScript
 		if target then
 			target:Destroy()
 		end
-	
+		wait(1)
 		-- Cek apakah karakter respawned, dan pastikan PrimaryPart diatur dengan benar
-		char = player.CharacterAdded:Wait()  -- Tunggu karakter baru
-		char:WaitForChild("HumanoidRootPart")  -- Pastikan HumanoidRootPart ada  -- Teleport karakter ke posisi yang diinginkan
+		char = player.CharacterAdded:Wait()  
 	end)
 	
+	char.Humanoid:GetPropertyChangedSignal("Jump"):Connect(function()
+		wait(1)
+		char.Humanoid.Jump = false
+	end)
+	
+	base.restart.MouseButton1Up:Connect(function()
+		if yesr.Value < 1 then
+			yesr.Value += 1
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "MC Drone",  -- Judul Notification
+				Text = "Click Once Again!",  -- Isi Pesan
+				Icon = "rbxassetid://18339405719",  -- (Opsional) ID asset gambar ikon (pakai ID gambar Roblox)
+				Duration = 3  -- Durasi (dalam detik) berapa lama notification tampil
+			})
+		else
+			if char.PrimaryPart == nil then
+				char.PrimaryPart = char:FindFirstChild("HumanoidRootPart")
+			end
+	
+			local target = game.Workspace:FindFirstChild(ls)
+			if target then
+				char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+				char.Humanoid.WalkSpeed = ws
+			end
+			Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+			if game.Workspace:FindFirstChild(obj) then
+				game.Workspace:FindFirstChild(obj):Destroy()
+			end
+			if game.Workspace:FindFirstChild(ls) then
+				game.Workspace:FindFirstChild(ls):Destroy()
+			end
+			if game.ReplicatedStorage:FindFirstChild(obj) then
+				game.ReplicatedStorage:FindFirstChild(obj):Destroy()
+			end
+			if game.Workspace:FindFirstChild("MCK Stalk Plate") then
+				game.Workspace:FindFirstChild("MCK Stalk Plate"):Destroy()
+			end
+			script.Parent:Destroy()
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/McKuadrat/Cpg/refs/heads/main/Drone")))()
+		end
+	end)
+	
+	script.Parent.close.MouseButton1Up:Connect(function()
+		if char.PrimaryPart == nil then
+			char.PrimaryPart = char:FindFirstChild("HumanoidRootPart")
+		end
+	
+		local target = game.Workspace:FindFirstChild(ls)
+		if target then
+			char:SetPrimaryPartCFrame(CFrame.new(target.Position + Vector3.new(0, 7, 0)))
+			char.Humanoid.WalkSpeed = ws
+		end
+		Camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+		if game.Workspace:FindFirstChild(obj) then
+			game.Workspace:FindFirstChild(obj):Destroy()
+		end
+		if game.Workspace:FindFirstChild(ls) then
+			game.Workspace:FindFirstChild(ls):Destroy()
+		end
+		if game.ReplicatedStorage:FindFirstChild(obj) then
+			game.ReplicatedStorage:FindFirstChild(obj):Destroy()
+		end
+		if game.Workspace:FindFirstChild("MCK Stalk Plate") then
+			game.Workspace:FindFirstChild("MCK Stalk Plate"):Destroy()
+		end
+		script.Parent:Destroy()
+	end)
 end
-coroutine.wrap(EXOBFF_fake_script)()
+coroutine.wrap(LGGBMD_fake_script)()
