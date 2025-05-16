@@ -1,0 +1,1100 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local Objekfinder = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local search = Instance.new("TextButton")
+local UIStroke_3 = Instance.new("UIStroke")
+local UICorner_3 = Instance.new("UICorner")
+local Information = Instance.new("TextButton")
+local UIStroke_4 = Instance.new("UIStroke")
+local UICorner_4 = Instance.new("UICorner")
+local Touch = Instance.new("TextButton")
+local UIStroke_5 = Instance.new("UIStroke")
+local UICorner_5 = Instance.new("UICorner")
+local information = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local name = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local cn = Instance.new("TextLabel")
+local mate = Instance.new("TextLabel")
+local pos = Instance.new("TextLabel")
+local hasc = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Location = Instance.new("TextLabel")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local haschild = Instance.new("TextLabel")
+local ig = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local gc = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local gg = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local anak = Instance.new("Frame")
+local Ttitle = Instance.new("TextLabel")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local template = Instance.new("TextButton")
+local Groups = Instance.new("Frame")
+local Ttitle_2 = Instance.new("TextLabel")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local template_2 = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local drag1 = Instance.new("UIDragDetector")
+local drag2 = Instance.new("UIDragDetector")
+local drag3 = Instance.new("UIDragDetector")
+local drag4 = Instance.new("UIDragDetector")
+
+
+-- Properties:
+
+Objekfinder.Name = "Objekfinder"
+Objekfinder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Objekfinder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Objekfinder.ResetOnSpawn = false
+
+Frame.Parent = Objekfinder
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.600
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0187032428, 0, 0.342532456, 0)
+Frame.Size = UDim2.new(0, 287, 0, 124)
+Frame.Visible = false
+
+drag1.Parent = Frame
+drag2.Parent = Groups
+drag3.Parent = information
+drag4.Parent = anak
+
+UICorner.Parent = Frame
+
+UIStroke.Color = Color3.fromRGB(255, 149, 0)
+UIStroke.Parent = Frame
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BackgroundTransparency = 0.600
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.062717773, 0, 0.153225809, 0)
+TextBox.Size = UDim2.new(0, 251, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Baseplate"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_2.Parent = TextBox
+
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(255, 149, 0)
+UIStroke_2.Parent = TextBox
+
+search.Name = "search"
+search.Parent = Frame
+search.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+search.BorderSizePixel = 0
+search.Position = UDim2.new(0.062717773, 0, 0.661290348, 0)
+search.Size = UDim2.new(0, 105, 0, 30)
+search.Font = Enum.Font.SourceSans
+search.Text = "Search"
+search.TextColor3 = Color3.fromRGB(255, 255, 255)
+search.TextScaled = true
+search.TextSize = 14.000
+search.TextWrapped = true
+
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(255, 149, 0)
+UIStroke_3.Parent = search
+
+UICorner_3.Parent = search
+
+Information.Name = "Information"
+Information.Parent = Frame
+Information.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Information.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Information.BorderSizePixel = 0
+Information.Position = UDim2.new(0.571428597, 0, 0.661290348, 0)
+Information.Size = UDim2.new(0, 105, 0, 30)
+Information.Font = Enum.Font.SourceSans
+Information.Text = "Information"
+Information.TextColor3 = Color3.fromRGB(255, 255, 255)
+Information.TextScaled = true
+Information.TextSize = 14.000
+Information.TextWrapped = true
+
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(255, 149, 0)
+UIStroke_4.Parent = Information
+
+UICorner_4.Parent = Information
+
+Touch.Name = "Touch"
+Touch.Parent = Frame
+Touch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Touch.BackgroundTransparency = 0.600
+Touch.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Touch.BorderSizePixel = 0
+Touch.Position = UDim2.new(0.0383275263, 0, -0.153225809, 0)
+Touch.Size = UDim2.new(0, 68, 0, 19)
+Touch.Font = Enum.Font.SourceSans
+Touch.Text = "Click Part"
+Touch.TextColor3 = Color3.fromRGB(255, 255, 255)
+Touch.TextSize = 14.000
+
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_5.Color = Color3.fromRGB(255, 149, 0)
+UIStroke_5.Parent = Touch
+
+UICorner_5.Parent = Touch
+
+information.Name = "information"
+information.Parent = Objekfinder
+information.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+information.BorderColor3 = Color3.fromRGB(0, 0, 0)
+information.BorderSizePixel = 0
+information.Position = UDim2.new(0.42892769, 0, 0.163961038, 0)
+information.Size = UDim2.new(0, 258, 0, 386)
+information.Visible = false
+
+TextLabel.Parent = information
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.0310880821, 0)
+TextLabel.Size = UDim2.new(0, 258, 0, 23)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Information"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Frame_2.Parent = information
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0426356606, 0, 0.108808286, 0)
+Frame_2.Size = UDim2.new(0, 235, 0, 344)
+
+name.Name = "name"
+name.Parent = Frame_2
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 1.000
+name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name.BorderSizePixel = 0
+name.Position = UDim2.new(0.0348837227, 0, 0.055850096, 0)
+name.Size = UDim2.new(0, 239, 0, 23)
+name.Font = Enum.Font.SourceSans
+name.Text = "Name : "
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
+name.TextXAlignment = Enum.TextXAlignment.Left
+
+UIListLayout.Parent = Frame_2
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 3)
+
+cn.Name = "cn"
+cn.Parent = Frame_2
+cn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cn.BackgroundTransparency = 1.000
+cn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cn.BorderSizePixel = 0
+cn.Position = UDim2.new(0.0348837227, 0, 0.115435578, 0)
+cn.Size = UDim2.new(0, 239, 0, 23)
+cn.Font = Enum.Font.SourceSans
+cn.Text = "ClassName :"
+cn.TextColor3 = Color3.fromRGB(255, 255, 255)
+cn.TextScaled = true
+cn.TextSize = 14.000
+cn.TextWrapped = true
+cn.TextXAlignment = Enum.TextXAlignment.Left
+
+mate.Name = "mate"
+mate.Parent = Frame_2
+mate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mate.BackgroundTransparency = 1.000
+mate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mate.BorderSizePixel = 0
+mate.Position = UDim2.new(0.0348837227, 0, 0.234606594, 0)
+mate.Size = UDim2.new(0, 239, 0, 23)
+mate.Font = Enum.Font.SourceSans
+mate.Text = "Material :"
+mate.TextColor3 = Color3.fromRGB(255, 255, 255)
+mate.TextScaled = true
+mate.TextSize = 14.000
+mate.TextWrapped = true
+mate.TextXAlignment = Enum.TextXAlignment.Left
+
+pos.Name = "pos"
+pos.Parent = Frame_2
+pos.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pos.BackgroundTransparency = 1.000
+pos.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pos.BorderSizePixel = 0
+pos.Position = UDim2.new(0.0348837227, 0, 0.175021067, 0)
+pos.Size = UDim2.new(0, 239, 0, 23)
+pos.Font = Enum.Font.SourceSans
+pos.Text = "Position :"
+pos.TextColor3 = Color3.fromRGB(255, 255, 255)
+pos.TextScaled = true
+pos.TextSize = 14.000
+pos.TextWrapped = true
+pos.TextXAlignment = Enum.TextXAlignment.Left
+
+hasc.Name = "hasc"
+hasc.Parent = Frame_2
+hasc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hasc.BackgroundTransparency = 1.000
+hasc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hasc.BorderSizePixel = 0
+hasc.Position = UDim2.new(0.0348837227, 0, 0.175021067, 0)
+hasc.Size = UDim2.new(0, 239, 0, 23)
+hasc.Font = Enum.Font.SourceSans
+hasc.Text = "Has Script :"
+hasc.TextColor3 = Color3.fromRGB(255, 255, 255)
+hasc.TextScaled = true
+hasc.TextSize = 14.000
+hasc.TextWrapped = true
+hasc.TextXAlignment = Enum.TextXAlignment.Left
+
+ScrollingFrame.Parent = Frame_2
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.377906978, 0)
+ScrollingFrame.Size = UDim2.new(0, 239, 0, 23)
+ScrollingFrame.CanvasSize = UDim2.new(2, 0, 0, 0)
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.ScrollBarThickness = 0
+
+Location.Name = "Location"
+Location.Parent = ScrollingFrame
+Location.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Location.BackgroundTransparency = 1.000
+Location.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Location.BorderSizePixel = 0
+Location.Position = UDim2.new(0.0348837227, 0, 0.175021067, 0)
+Location.Size = UDim2.new(0, 239, 0, 23)
+Location.Font = Enum.Font.SourceSans
+Location.Text = "Path :"
+Location.TextColor3 = Color3.fromRGB(255, 255, 255)
+Location.TextScaled = true
+Location.TextSize = 23.000
+Location.TextWrapped = true
+Location.TextXAlignment = Enum.TextXAlignment.Left
+
+UIListLayout_2.Parent = ScrollingFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 3)
+
+haschild.Name = "haschild"
+haschild.Parent = Frame_2
+haschild.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+haschild.BackgroundTransparency = 1.000
+haschild.BorderColor3 = Color3.fromRGB(0, 0, 0)
+haschild.BorderSizePixel = 0
+haschild.Position = UDim2.new(0.0348837227, 0, 0.175021067, 0)
+haschild.Size = UDim2.new(0, 239, 0, 23)
+haschild.Font = Enum.Font.SourceSans
+haschild.Text = "Has Child :"
+haschild.TextColor3 = Color3.fromRGB(255, 255, 255)
+haschild.TextScaled = true
+haschild.TextSize = 14.000
+haschild.TextWrapped = true
+haschild.TextXAlignment = Enum.TextXAlignment.Left
+
+ig.Name = "ig"
+ig.Parent = Frame_2
+ig.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ig.BackgroundTransparency = 1.000
+ig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ig.BorderSizePixel = 0
+ig.Position = UDim2.new(0.0348837227, 0, 0.175021067, 0)
+ig.Size = UDim2.new(0, 239, 0, 23)
+ig.Font = Enum.Font.SourceSans
+ig.Text = "In Groups :"
+ig.TextColor3 = Color3.fromRGB(255, 255, 255)
+ig.TextScaled = true
+ig.TextSize = 14.000
+ig.TextWrapped = true
+ig.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_3.Parent = Frame_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0, 0, 0.604651153, 0)
+Frame_3.Size = UDim2.new(0, 100, 0, 30)
+
+gc.Name = "gc"
+gc.Parent = Frame_3
+gc.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+gc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gc.BorderSizePixel = 0
+gc.Position = UDim2.new(0, 0, 0.529069781, 0)
+gc.Size = UDim2.new(0, 79, 0, 31)
+gc.Font = Enum.Font.FredokaOne
+gc.Text = "Get Child"
+gc.TextColor3 = Color3.fromRGB(255, 255, 255)
+gc.TextSize = 20.000
+gc.TextWrapped = true
+
+UICorner_6.Parent = gc
+
+gg.Name = "gg"
+gg.Parent = Frame_3
+gg.BackgroundColor3 = Color3.fromRGB(139, 139, 139)
+gg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gg.BorderSizePixel = 0
+gg.Position = UDim2.new(0, 0, 0.529069781, 0)
+gg.Size = UDim2.new(0, 79, 0, 31)
+gg.Visible = false
+gg.Font = Enum.Font.FredokaOne
+gg.Text = "Get Group"
+gg.TextColor3 = Color3.fromRGB(255, 255, 255)
+gg.TextScaled = true
+gg.TextSize = 19.000
+gg.TextWrapped = true
+
+UICorner_7.Parent = gg
+
+UIListLayout_3.Parent = Frame_3
+UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 3)
+
+anak.Name = "anak"
+anak.Parent = Objekfinder
+anak.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+anak.BorderColor3 = Color3.fromRGB(0, 0, 0)
+anak.BorderSizePixel = 0
+anak.Position = UDim2.new(0.42892769, 0, 0.163961038, 0)
+anak.Size = UDim2.new(0, 258, 0, 386)
+anak.Visible = false
+
+Ttitle.Name = "Ttitle"
+Ttitle.Parent = anak
+Ttitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ttitle.BackgroundTransparency = 1.000
+Ttitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ttitle.BorderSizePixel = 0
+Ttitle.Position = UDim2.new(0, 0, 0.0310880821, 0)
+Ttitle.Size = UDim2.new(0, 258, 0, 23)
+Ttitle.Font = Enum.Font.SourceSans
+Ttitle.Text = "Part Children"
+Ttitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ttitle.TextScaled = true
+Ttitle.TextSize = 14.000
+Ttitle.TextWrapped = true
+
+ScrollingFrame_2.Parent = anak
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.0542635657, 0, 0.129533678, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 233, 0, 329)
+ScrollingFrame_2.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.ScrollBarThickness = 0
+
+UIListLayout_4.Parent = ScrollingFrame_2
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+
+template.Name = "template"
+template.Parent = anak
+template.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+template.BorderColor3 = Color3.fromRGB(0, 0, 0)
+template.BorderSizePixel = 0
+template.Size = UDim2.new(0, 233, 0, 25)
+template.Visible = false
+template.Font = Enum.Font.SourceSans
+template.TextColor3 = Color3.fromRGB(255, 255, 255)
+template.TextSize = 14.000
+
+Groups.Name = "Groups"
+Groups.Parent = Objekfinder
+Groups.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Groups.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Groups.BorderSizePixel = 0
+Groups.Position = UDim2.new(0.42892769, 0, 0.163961038, 0)
+Groups.Size = UDim2.new(0, 258, 0, 386)
+Groups.Visible = false
+
+Ttitle_2.Name = "Ttitle"
+Ttitle_2.Parent = Groups
+Ttitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ttitle_2.BackgroundTransparency = 1.000
+Ttitle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ttitle_2.BorderSizePixel = 0
+Ttitle_2.Position = UDim2.new(0, 0, 0.0310880821, 0)
+Ttitle_2.Size = UDim2.new(0, 258, 0, 23)
+Ttitle_2.Font = Enum.Font.SourceSans
+Ttitle_2.Text = "Part Groups"
+Ttitle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ttitle_2.TextScaled = true
+Ttitle_2.TextSize = 14.000
+Ttitle_2.TextWrapped = true
+
+ScrollingFrame_3.Parent = Groups
+ScrollingFrame_3.Active = true
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_3.BackgroundTransparency = 1.000
+ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_3.BorderSizePixel = 0
+ScrollingFrame_3.Position = UDim2.new(0.0542635657, 0, 0.129533678, 0)
+ScrollingFrame_3.Size = UDim2.new(0, 233, 0, 329)
+ScrollingFrame_3.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_3.ScrollBarThickness = 0
+
+UIListLayout_5.Parent = ScrollingFrame_3
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+
+template_2.Name = "template"
+template_2.Parent = Groups
+template_2.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+template_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+template_2.BorderSizePixel = 0
+template_2.Size = UDim2.new(0, 233, 0, 25)
+template_2.Visible = false
+template_2.Font = Enum.Font.SourceSans
+template_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+template_2.TextSize = 14.000
+
+TextButton.Parent = Objekfinder
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BackgroundTransparency = 0.600
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.00872817915, 0, 0.0146103892, 0)
+TextButton.Size = UDim2.new(0, 50, 0, 50)
+TextButton.Font = Enum.Font.Arcade
+TextButton.Text = "OF"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 35.000
+TextButton.TextWrapped = true
+
+UICorner_8.Parent = TextButton
+
+-- Scripts:
+
+local function ZZAILIN_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local player = game.Players.LocalPlayer
+	local tikus = player:GetMouse()
+	local click = true
+	local infor = script.Parent.Parent.information
+	local selecti = Instance.new("SelectionBox")
+	selecti.Name = "MCKBOXSELECT"
+	local testt = Instance.new("LocalScript")
+	local target = nil
+	local touch = false
+	local anak = infor.Parent.anak
+	local group = anak.Parent.Groups
+	local adaanak = false
+	local UIS = game:GetService("UserInputService")
+	
+	local function updateCanvas(scrollingFrame)
+		local listLayout = scrollingFrame:WaitForChild("UIListLayout")
+		
+		scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, listLayout.AbsoluteContentSize.Y)
+	end
+	
+	local function updateCanvasSize(textLabel, scrollingFrame)
+		-- Ukur ukuran aktual teks
+		local textSize = textLabel.TextBounds
+	
+		-- Ambil ukuran tinggi dari ScrollingFrame (supaya Y gak berubah)
+		local currentY = scrollingFrame.CanvasSize.Y
+	
+		-- Tambahkan sedikit padding opsional kalau mau
+		local padding = 40
+	
+		-- Set CanvasSize X agar sesuai panjang teks
+		scrollingFrame.CanvasSize = UDim2.new(0, textSize.X + padding, currentY.Scale, currentY.Offset)
+		textLabel.Size = UDim2.new(0, textSize.X + 500, textLabel.Size.Y.Scale, textLabel.Size.Y.Offset)
+	end
+	
+	local function GetPath(obj)
+		local path = obj.Name
+		local current = obj
+	
+		while current.Parent and current.Parent ~= game do
+			current = current.Parent
+			path = current.Name .. "." .. path
+		end
+	
+		-- Tambahkan 'game' di awal
+		if current.Parent == game then
+			path = "game." .. path
+		end
+	
+		return path
+	end
+	
+	UIS.InputBegan:Connect(function(a, b)
+		if b then return end
+		
+		if a.KeyCode == Enum.KeyCode.P then
+			touch = not touch
+			if touch == false then
+				script.Parent.Touch.BackgroundColor3 = Color3.new(0, 0, 0)
+			else
+				script.Parent.Touch.BackgroundColor3 = Color3.new(1, 0.584314, 0)
+			end
+		end
+	end)
+	
+	tikus.Button1Down:Connect(function()
+		local part = tikus.Target
+		if part and part:IsA("BasePart") and touch == true then
+			target = part.Name
+			selecti.Adornee = part
+			selecti.Parent = game.Workspace
+			selecti.Color3 = Color3.new(0.133333, 1, 0)
+			
+			script.Parent.TextBox.Text = part.Name
+			
+			infor.Frame.name.Text = "Name : " .. part.Name
+			infor.Frame.cn.Text = "ClassName : " .. part.ClassName
+			
+			local pos = part.Position
+			local flooring = Vector3.new(
+				math.floor(pos.X),
+				math.floor(pos.Y),
+				math.floor(pos.Z)
+			)
+			
+			if part.Material then
+				infor.Frame.mate.Text = "Material : " .. part.Material.Name
+			else
+				infor.Frame.mate.Text = "Material : nil"
+			end
+	
+			if part.Position then
+				infor.Frame.pos.Text = "Position : " .. tostring(flooring)
+			else
+				infor.Frame.pos.Text = "Position : nil"
+			end
+	
+			-- Cek apakah ada Script atau LocalScript di dalam part
+			local hasScript = false
+			for _, obj in pairs(part:GetDescendants()) do
+				if obj:IsA("Script") or obj:IsA("LocalScript") then
+					hasScript = true
+					break
+				end
+			end
+	
+			if hasScript then
+				infor.Frame.hasc.Text = "Script : Yes"
+			else
+				infor.Frame.hasc.Text = "Script : No"
+			end
+			
+			local path = GetPath(part)
+			
+			infor.Frame.ScrollingFrame.Location.Text = "Path : "..path
+			
+			for _, a in pairs(part:GetChildren()) do
+				if a:IsA("BasePart") then
+					adaanak = true
+					break
+				end
+			end
+			
+			if adaanak then
+				infor.Frame.haschild.Text = "Has Child : Yes"
+				infor.Frame.Frame.gc.Visible = true
+				adaanak = false
+			else
+				infor.Frame.haschild.Text = "Has Child : No"
+				infor.Frame.Frame.gc.Visible = false
+				adaanak = false
+			end
+			
+			if part.Parent:IsA("Folder") or part.Parent.ClassName == "Model" then
+				infor.Frame.Frame.gg.Visible = true
+				infor.Frame.ig.Text = "In Groups : Yes"
+			else
+				infor.Frame.Frame.gg.Visible = false
+				infor.Frame.ig.Text = "In Groups : No"
+			end
+			
+			updateCanvasSize(infor.Frame.ScrollingFrame.Location, infor.Frame.ScrollingFrame)
+		elseif touch == true then
+			selecti.Adornee = nil
+			selecti.Parent = nil
+			script.Parent.TextBox.Text = ""
+			target = nil
+			infor.Visible = false
+		end
+	end)
+	
+	
+	script.Parent.Information.MouseButton1Up:Connect(function()
+		if target == nil then
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Notification",
+				Text = "Please Select A Part First",
+				Duration = 5
+			})
+		else
+			infor.Visible = not infor.Visible
+			anak.Visible = false
+			group.Visible = false
+		end
+	end)
+	
+	script.Parent.search.MouseButton1Up:Connect(function()
+		for _, part in pairs(game:GetDescendants()) do
+			if part and part:IsA("BasePart") and part.Name == script.Parent.TextBox.Text and part:IsDescendantOf(game.Workspace) then
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "Part Found",
+					Text = "Part Was Found!, You Can Check In Information!",
+					Duration = 5
+				})
+				target = part.Name
+			selecti.Adornee = part
+			selecti.Parent = game.Workspace
+			selecti.Color3 = Color3.new(0.133333, 1, 0)
+			
+			script.Parent.TextBox.Text = part.Name
+			
+			infor.Frame.name.Text = "Name : " .. part.Name
+			infor.Frame.cn.Text = "ClassName : " .. part.ClassName
+			
+			local pos = part.Position
+			local flooring = Vector3.new(
+				math.floor(pos.X),
+				math.floor(pos.Y),
+				math.floor(pos.Z)
+			)
+			
+			if part.Material then
+				infor.Frame.mate.Text = "Material : " .. part.Material.Name
+			else
+				infor.Frame.mate.Text = "Material : nil"
+			end
+	
+			if part.Position then
+				infor.Frame.pos.Text = "Position : " .. tostring(flooring)
+			else
+				infor.Frame.pos.Text = "Position : nil"
+			end
+	
+			-- Cek apakah ada Script atau LocalScript di dalam part
+			local hasScript = false
+			for _, obj in pairs(part:GetDescendants()) do
+				if obj:IsA("Script") or obj:IsA("LocalScript") then
+					hasScript = true
+					break
+				end
+			end
+	
+			if hasScript then
+				infor.Frame.hasc.Text = "Script : Yes"
+			else
+				infor.Frame.hasc.Text = "Script : No"
+			end
+			
+			local path = GetPath(part)
+			
+			infor.Frame.ScrollingFrame.Location.Text = "Path : "..path
+			
+			updateCanvasSize(infor.Frame.ScrollingFrame.Location, infor.Frame.ScrollingFrame)
+			
+			for _, a in pairs(part:GetChildren()) do
+				if a:IsA("BasePart") then
+					adaanak = true
+					break
+				end
+			end
+			
+			if adaanak then
+				infor.Frame.haschild.Text = "Has Child : Yes"
+				infor.Frame.Frame.gc.Visible = true
+				adaanak = false
+			else
+				infor.Frame.haschild.Text = "Has Child : No"
+				infor.Frame.Frame.gc.Visible = false
+				adaanak = false
+			end
+			
+				if part.Parent:IsA("Folder") or part.Parent.ClassName == "Model" then
+					infor.Frame.Frame.gg.Visible = true
+					infor.Frame.ig.Text = "In Groups : Yes"
+				else
+					infor.Frame.Frame.gg.Visible = false
+					infor.Frame.ig.Text = "In Groups : No"
+				end
+			break
+			else
+				if part and part:IsA("BasePart") and part.Name == script.Parent.TextBox.Text then
+					game.StarterGui:SetCore("SendNotification", {
+						Title = "Part Found",
+						Text = "Part Was Found!, You Can Check In Information!",
+						Duration = 5
+					})
+					target = part.Name
+	
+					infor.Frame.name.Text = "Name : " .. part.Name
+					infor.Frame.cn.Text = "ClassName : " .. part.ClassName
+	
+					if part.Material then
+						infor.Frame.mate.Text = "Material : nil"
+					else
+						infor.Frame.mate.Text = "Material : nil"
+					end
+	
+					if part.Position then
+						infor.Frame.pos.Text = "Position : nil"
+					else
+						infor.Frame.pos.Text = "Position : nil"
+					end
+	
+					-- Cek apakah ada Script atau LocalScript di dalam part
+					local hasScript = false
+					for _, obj in pairs(part:GetDescendants()) do
+						if obj:IsA("Script") or obj:IsA("LocalScript") then
+							hasScript = true
+							break
+						end
+					end
+	
+					if hasScript then
+						infor.Frame.hasc.Text = "Script : Yes"
+					else
+						infor.Frame.hasc.Text = "Script : No"
+					end
+	
+					local path = GetPath(part)
+	
+					infor.Frame.ScrollingFrame.Location.Text = "Path : "..path
+					
+					for _, a in pairs(part:GetChildren()) do
+						if a:IsA("BasePart") then
+							adaanak = true
+							break
+						end
+					end
+	
+					if adaanak then
+						infor.Frame.haschild.Text = "Has Child : Yes"
+						infor.Frame.Frame.gc.Visible = true
+						adaanak = false
+					else
+						infor.Frame.haschild.Text = "Has Child : No"
+						infor.Frame.Frame.gc.Visible = false
+						adaanak = false
+					end
+					
+					if part.Parent:IsA("Model") or part.Parent:IsA("Folder") then
+						infor.Frame.Frame.gg.Visible = true
+					else
+						infor.Frame.Frame.gg.Visible = false
+					end
+	
+					updateCanvasSize(infor.Frame.ScrollingFrame.Location, infor.Frame.ScrollingFrame)
+					break
+				end
+			end
+		end
+	end)
+	
+	script.Parent.Touch.MouseButton1Up:Connect(function()
+		if touch == false then
+			touch = true
+			script.Parent.Touch.BackgroundColor3 = Color3.new(1, 0.584314, 0)
+		else
+			touch = false
+			script.Parent.Touch.BackgroundColor3 = Color3.new(0, 0, 0)
+		end
+	end)
+	
+	infor.Frame.Frame.gc.MouseButton1Up:Connect(function()
+		anak.Visible = true
+		infor.Visible = false
+		anak.Position = infor.Position
+		
+		for _, anakd in pairs(anak.ScrollingFrame:GetChildren()) do
+			if not anakd:IsA("UIListLayout") then
+				anakd:Destroy()
+			end
+		end
+		
+		for _, part in pairs(selecti.Adornee:GetChildren()) do
+			if part:IsA("BasePart") then
+				local template = anak.template:Clone()
+				template.Parent = anak.ScrollingFrame
+				template.Name = part.Name
+				template.Text = part.Name
+				template.Visible = true
+				template.MouseButton1Up:Connect(function()
+					if part and part:IsA("BasePart") then
+						game.StarterGui:SetCore("SendNotification", {
+							Title = "Part Found",
+							Text = "Part Was Found!, You Can Check In Information!",
+							Duration = 5
+						})
+						target = part.Name
+						selecti.Adornee = part
+						selecti.Parent = game.Workspace
+						selecti.Color3 = Color3.new(0.133333, 1, 0)
+	
+						script.Parent.TextBox.Text = part.Name
+	
+						infor.Frame.name.Text = "Name : " .. part.Name
+						infor.Frame.cn.Text = "ClassName : " .. part.ClassName
+	
+						local pos = part.Position
+						local flooring = Vector3.new(
+							math.floor(pos.X),
+							math.floor(pos.Y),
+							math.floor(pos.Z)
+						)
+	
+						if part.Material then
+							infor.Frame.mate.Text = "Material : " .. part.Material.Name
+						else
+							infor.Frame.mate.Text = "Material : nil"
+						end
+	
+						if part.Position then
+							infor.Frame.pos.Text = "Position : " .. tostring(flooring)
+						else
+							infor.Frame.pos.Text = "Position : nil"
+						end
+	
+						-- Cek apakah ada Script atau LocalScript di dalam part
+						local hasScript = false
+						for _, obj in pairs(part:GetDescendants()) do
+							if obj:IsA("Script") or obj:IsA("LocalScript") then
+								hasScript = true
+								break
+							end
+						end
+	
+						if hasScript then
+							infor.Frame.hasc.Text = "Script : Yes"
+						else
+							infor.Frame.hasc.Text = "Script : No"
+						end
+	
+						local path = GetPath(part)
+	
+						infor.Frame.ScrollingFrame.Location.Text = "Path : "..path
+	
+						updateCanvasSize(infor.Frame.ScrollingFrame.Location, infor.Frame.ScrollingFrame)
+	
+						for _, a in pairs(part:GetChildren()) do
+							if a:IsA("BasePart") then
+								adaanak = true
+								break
+							end
+						end
+	
+						if adaanak then
+							infor.Frame.haschild.Text = "Has Child : Yes"
+							infor.Frame.Frame.gc.Visible = true
+							adaanak = false
+						else
+							infor.Frame.haschild.Text = "Has Child : No"
+							infor.Frame.Frame.gc.Visible = false
+							adaanak = false
+						end
+						
+						if part.Parent:IsA("Folder") or part.Parent.ClassName == "Model" then
+							infor.Frame.Frame.gg.Visible = true
+							infor.Frame.ig.Text = "In Groups : Yes"
+						else
+							infor.Frame.Frame.gg.Visible = false
+							infor.Frame.ig.Text = "In Groups : No"
+						end
+						
+						anak.Visible = false
+						infor.Visible = true
+					end
+				end)
+			end
+		end
+		updateCanvas(anak.ScrollingFrame)
+	end)
+	
+	infor.Frame.Frame.gg.MouseButton1Up:Connect(function()
+		group.Visible = true
+		infor.Visible = false
+		
+		for _, grop in pairs(group.ScrollingFrame:GetChildren()) do
+			if not grop:IsA("UIListLayout") then
+				grop:Destroy()
+			end
+		end
+		
+		for _, part in pairs(selecti.Adornee.Parent:GetChildren()) do
+			if part:IsA("BasePart") then
+				local template = group.template:Clone()
+				template.Parent = group.ScrollingFrame
+				template.Name = part.Name.."_"..tostring(_)
+				template.Text = part.Name
+				template.Visible = true
+				template.MouseButton1Up:Connect(function()
+					if part and part:IsA("BasePart") then
+						game.StarterGui:SetCore("SendNotification", {
+							Title = "Part Found",
+							Text = "Part Was Found!, You Can Check In Information!",
+							Duration = 5
+						})
+						target = part.Name
+						selecti.Adornee = part
+						selecti.Parent = game.Workspace
+						selecti.Color3 = Color3.new(0.133333, 1, 0)
+	
+						script.Parent.TextBox.Text = part.Name
+	
+						infor.Frame.name.Text = "Name : " .. part.Name
+						infor.Frame.cn.Text = "ClassName : " .. part.ClassName
+	
+						local pos = part.Position
+						local flooring = Vector3.new(
+							math.floor(pos.X),
+							math.floor(pos.Y),
+							math.floor(pos.Z)
+						)
+	
+						if part.Material then
+							infor.Frame.mate.Text = "Material : " .. part.Material.Name
+						else
+							infor.Frame.mate.Text = "Material : nil"
+						end
+	
+						if part.Position then
+							infor.Frame.pos.Text = "Position : " .. tostring(flooring)
+						else
+							infor.Frame.pos.Text = "Position : nil"
+						end
+	
+						-- Cek apakah ada Script atau LocalScript di dalam part
+						local hasScript = false
+						for _, obj in pairs(part:GetDescendants()) do
+							if obj:IsA("Script") or obj:IsA("LocalScript") then
+								hasScript = true
+								break
+							end
+						end
+	
+						if hasScript then
+							infor.Frame.hasc.Text = "Script : Yes"
+						else
+							infor.Frame.hasc.Text = "Script : No"
+						end
+	
+						local path = GetPath(part)
+	
+						infor.Frame.ScrollingFrame.Location.Text = "Path : "..path
+	
+						updateCanvasSize(infor.Frame.ScrollingFrame.Location, infor.Frame.ScrollingFrame)
+	
+						for _, a in pairs(part:GetChildren()) do
+							if a:IsA("BasePart") then
+								adaanak = true
+								break
+							end
+						end
+	
+						if adaanak then
+							infor.Frame.haschild.Text = "Has Child : Yes"
+							infor.Frame.Frame.gc.Visible = true
+							adaanak = false
+						else
+							infor.Frame.haschild.Text = "Has Child : No"
+							infor.Frame.Frame.gc.Visible = false
+							adaanak = false
+						end
+	
+						if part.Parent:IsA("Folder") or part.Parent.ClassName == "Model" then
+							infor.Frame.Frame.gg.Visible = true
+							infor.Frame.ig.Text = "In Groups : Yes"
+						else
+							infor.Frame.Frame.gg.Visible = false
+							infor.Frame.ig.Text = "In Groups : No"
+						end
+	
+						group.Visible = false
+						infor.Visible = true
+					end
+				end)
+			end
+		end
+		updateCanvas(group.ScrollingFrame)
+	end)
+	
+	infor.Parent.TextButton.MouseButton1Up:Connect(function()
+		script.Parent.Visible = not script.Parent.Visible
+	end)
+end
+coroutine.wrap(ZZAILIN_fake_script)()
+local function CVHTVG_fake_script() -- TextButton.DraggableGUI 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(CVHTVG_fake_script)()
